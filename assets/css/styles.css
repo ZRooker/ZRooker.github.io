@@ -424,7 +424,7 @@ a[href^=tel] { text-decoration: none; color: red }
 @media all and (min-width: 768px) {
 	.container-flexbox.container-hero-block-two-columns { 
         background-color: #ECDBBA;
-        background-image: url(/assets/img/L1130302b.jpg);
+        /* background-image: url(/assets/img/L1130302b.jpg); */
         background-repeat: no-repeat, repeat;
         background-size: cover;
         background-position: center center;
