@@ -182,10 +182,10 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: row; 
   align-items: center; 
   font-size: 50px;
-  color: var(--background-accent);
+  color: var(--text);
   font-weight: 500;
   font-family: 'Tangerine', serif;
-  text-shadow: 1px 1px 1px black;
+  /* text-shadow: 1px 1px 1px black; */
 }
 /*#endregion */
 
@@ -198,6 +198,8 @@ body::-webkit-scrollbar-thumb:hover {
         justify-content: space-between;
         padding: 0 5% 0 5%;
         width: 100%;
+        background-color: var(--background);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.55);
     }
 
     /* menu links and cta button aligned horizontally */
@@ -217,8 +219,8 @@ body::-webkit-scrollbar-thumb:hover {
     .container-menu-desktop ul li a {
         font-size: calc(20px + (19 - 15) * ((100vw - 320px)/(1600 - 320)));
         /* font-weight:bold */
-        color: white;
-        text-shadow: 1px 1px 1px black;
+        color: var(--text);
+        /* text-shadow: 1px 1px 1px var(--text); */
         /* text-transform: uppercase */
     }
 
@@ -228,8 +230,8 @@ body::-webkit-scrollbar-thumb:hover {
         border-width: 2px;
         border-style: solid;
         /* font-weight: bold; */
-        color: var(--w);
-        text-shadow: 1px 2px 2px black;
+        color: var(--text);
+        /* text-shadow: 1px 2px 2px black; */
     }
 
     /* cta button padding */
@@ -437,13 +439,13 @@ body::-webkit-scrollbar-thumb:hover {
     /*#region*/
 
         @media all and (min-width: 768px) {
-            .hero-flexbox.container-hero-block-two-columns { 
+            .hero-flexbox.container-hero-block-one-columns { 
                 background-color: var(--background);
                 background-image: url(/assets/img/L1130068.jpg);
                 background-repeat: no-repeat, repeat;
                 background-size: cover;
                 background-position: right 25%;
-                margin-top: 0;
+                margin-top: 120px;
                 max-width: 100%;
                 height: 20%;
                 border-bottom: 3px solid rgba(0, 0, 0, 0.25);  
@@ -498,7 +500,7 @@ body::-webkit-scrollbar-thumb:hover {
     /*#region*/
     @media all and (max-width: 767px) {
         .container-flexbox.container-hero-block-two-columns { 
-            background-color: #000000;    
+            background-color: var(--background);    
             background-image: url(/assets/img/_WKS8094.jpg);
             background-size: cover;
             background-position: center center;
