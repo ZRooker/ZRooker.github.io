@@ -540,36 +540,82 @@ body::-webkit-scrollbar-thumb:hover {
     
     .body-container{
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-content: fles-start;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: space-around;
         flex-wrap: wrap;
+        /* align-items: flex-end; */
         /* border: 2px solid #fffefe; */
         /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
-        background-color:var(--background);
-        height: 100%;
-        
+        /* background-color:var(--background); */
+        /* height: 100%;  */
     }
+
     .body-container .body-item-1,
-    .body-container .body-item-2 {
+    .body-container .body-item-3 {
         background-color: red;
+        width: 40%;
+        height: 40%;
+        flex-basis: auto;
+        flex-grow: 1;
     }
     
     .body-container .body-item-1 h1,
-    .body-container .body-item-2 h1{
+    .body-container .body-item-3 h1{
+        padding-top: 10%;
         color: green;
+        text-align: center;
     }
 
     .body-container .body-item-1 h2,
-    .body-container .body-item-2 h2{
+    .body-container .body-item-3 h2{
+        padding-top: 5%;
         color: yellow;
+        text-align: center; 
     }
 
     .body-container .body-item-1 p,
-    .body-container .body-item-2 p{
+    .body-container .body-item-3 p{
+        padding: 2% 2% 2% 2%; 
         color: purple;
+        margin: 5%;
+        /* flex-shrink: 3; */
     }
 
+    .body-container .body-item-2,
+    .body-container .body-item-4 {
+        width: 40%;
+        height: 40%;
+        /* flex-shrink: 3;
+        flex-grow: 1; */
+        background-color: blue;
+        padding: 3% 3% 3% 3%;
+    }
+
+    .body-container .body-item-2 img,
+    .body-container .body-item-4 img {
+        display: block;
+        margin: auto auto;
+        max-width: 70%;
+        height: auto;
+        /* border-radius: 2%; */
+        border: 2px solid yellow;
+        opacity: 75%;
+    }
+
+    /* Order of Flexbox*/
+    /* .body-container .body-item-1{
+        order: 1;
+    }
+     .body-container .body-item-2{
+        order: 1;
+    }
+    .body-container .body-item-3{
+        order: 2;
+    }
+    .body-container .body-item-3{
+        order: 2;
+    } */
 
 /* ################ FOOTER CSS (SAME FOR BOTH MOBILE AND DESKTOP ################ */
     /*#region */
