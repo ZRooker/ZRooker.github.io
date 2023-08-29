@@ -548,16 +548,14 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .story-container .story-item-1 h1{
-        color: var(--text-accent);
+        color: var(--primary);
         margin-top: 2%; 
         text-align: center;
-        font-size: calc(20px + (20 - 8) * ((100vw - 320px) / (1600 - 320)));
     }
 
     .story-container .story-item-1 p{
         margin: 3% 5% 2% 2% ; 
         color: var(--text);
-        font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1600 - 320)));
     }
 
 /* ######################## CONTENT BLOCK  ################################3# */
@@ -587,22 +585,28 @@ body::-webkit-scrollbar-thumb:hover {
     .body-container .body-item-1 h1,
     .body-container .body-item-3 h1{
         padding-top: 10%;
-        color: green;
+        /* color: green; */
         text-align: center;
+        font-size: calc(30px + (30 - 15) * ((100vw - 320px) / (1600 - 320))); 
+        text-shadow: 1px 1px 1px black;
     }
+
+    .body-container .body-item-1 h1{ color: var(--primary); }
+    .body-container .body-item-3 h1{ color: var(--lb); }
 
     .body-container .body-item-1 h2,
     .body-container .body-item-3 h2{
-        padding-top: 5%;
-        color: yellow;
+        padding-top: 2%;
+        color: var(--text-accent);
         text-align: center; 
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
     .body-container .body-item-1 p,
     .body-container .body-item-3 p{
         padding: 2% 2% 2% 2%; 
-        color: purple;
-        margin: 5%;
+        color: var(--text);
+        margin: 3%;
         /* flex-shrink: 3; */
     }
 
