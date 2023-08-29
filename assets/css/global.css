@@ -616,7 +616,7 @@ body::-webkit-scrollbar-thumb:hover {
         height: 40%;
         /* flex-shrink: 3;
         flex-grow: 1; */
-        background-color: blue;
+        /* background-color: blue; */
         padding: 3% 3% 3% 3%;
     }
 
