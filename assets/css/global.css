@@ -20,6 +20,7 @@
 @media (prefers-color-scheme: dark){
     :root{
         --text:#FEECED ;
+        --text-accent: #F8E8EE;
         --background: #090107;
         --background-accent: #040103;
         --primary: #F9808A;
@@ -534,6 +535,27 @@ body::-webkit-scrollbar-thumb:hover {
         justify-content: center;
         flex-wrap: wrap;
         align-content: center;
+    }
+/* ######################## STORY BLOCK  ################################3# */
+    .story-container{
+        display: flex;
+        justify-content: center; 
+        background-color: var(--background);
+    }
+
+    .story-container .story-item-1{
+        padding: 2% 2% 2% 2%; 
+    }
+
+    .story-container .story-item-1 h1{
+        color: var(--text-accent);
+        margin-top: 2%; 
+        text-align: center;
+    }
+
+    .story-container .story-item-1 p{
+        margin: 3% 5% 2% 2% ; 
+        color: var(--text);
     }
 
 /* ######################## CONTENT BLOCK  ################################3# */
