@@ -537,39 +537,40 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
 /* ######################## CONTENT BLOCK  ################################3# */
-    .body-flexbox { 
+    
+    .body-flexbox{
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-content: center;
         flex-direction: column;
+        justify-content: space-around;
+        align-content: fles-start;
+        flex-wrap: wrap;
+        /* border: 2px solid #fffefe; */
+        /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
+        background-color:var(--background);
+        height: 100%;
+        
+    }
+    .body-flexbox .body-item-1,
+    .body-flexbox .body-item-2 {
+        background-color: red;
+    }
+    
+    .body-flexbox .body-item-1 h1,
+    .body-flexbox .body-item-2 h1{
+        color: green;
     }
 
-     @media all and (max-width: 767px) {
-            .body-flexbox .continer-item-1 h1 { 
-                background-color: var(--background);    
-                background-size: cover;
-                background-position: center center;
-                margin-top: 0%;
-                margin-bottom: 0%;
-                text-align: center;
-                height: 100%;
-                border: 3px solid rgba(0, 0, 0, 0.75); 
-            }
-            
-            .body-flexbox .content-item-1 h1 {
-                font-family: 'Tangerine', sans-serif; 
-                /* color: rgba(255, 255, 255, 0.97);  */
-                color: var(--w);
-                text-shadow: 1px 2px 2px black;
-                font-weight: 500; 
-                line-height: 1.1;
-                margin-bottom: 20px;
-                /* letter-spacing:-2px; */
-                margin-top: 90%;
-                font-size: calc(50px + (60 - 30) * ((100vw - 320px) / (1600 - 320))); 
-            }
-     }
+    .body-flexbox .body-item-1 h2,
+    .body-flexbox .body-item-2 h2{
+        color: yellow;
+    }
+
+    .body-flexbox .body-item-1 p,
+    .body-flexbox .body-item-2 p{
+        color: purple;
+    }
+
+
 /* ################ FOOTER CSS (SAME FOR BOTH MOBILE AND DESKTOP ################ */
     /*#region */
     /* Outer footer parent container */
@@ -661,7 +662,8 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .container-footer .flex-item-2  ul.footer-links {
-        margin: 0 auto 18px auto;
+        margin: 0 auto 18p
+            x auto;
     }
 
     .container-footer .flex-item-2 ul.footer-icons {
