@@ -573,14 +573,15 @@ body::-webkit-scrollbar-thumb:hover {
         color: var(--primary); 
         margin-top: 2%; 
         text-align: center;
-        font-size: calc(30px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
+        text-shadow: 1px 1px 1px black;
+        font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
     .story-container .story-item-1 h2{
         color: var(--text); 
-        font-weight: 500; 
+        font-weight: bold; 
         text-align: center;
-        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));   
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320)));   
     }
 
     .story-container .story-item-1 p{
@@ -646,11 +647,13 @@ body::-webkit-scrollbar-thumb:hover {
         color: var(--text);
         margin-bottom: 20%;
         /* flex-shrink: 3; */
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
     .body-item-2, .body-item-4 {
         /* background-color: blue; */
         margin-bottom: 5%;
+        flex-grow: 1;
     }
 
     .body-container .body-item-2 img,
