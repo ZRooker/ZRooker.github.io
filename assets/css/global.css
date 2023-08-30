@@ -1,6 +1,7 @@
 /* Color Pallet */
 :root {
     --w: #F8E8EE;
+    --white: white; 
     --b: black;
     --lb: lightblue;
 }
@@ -9,23 +10,35 @@
 @media (prefers-color-scheme: light){
     :root{
         --text:black;
+        --text-accent: #F8E8EE;
         --background: #FEECED;
         --background-accent: #e6e6e6;
         --primary: #F9808A;
         --secondary: #e32b47;
         --accent: #ec73c2;
+        --dark:#090107;
     }
 }
 
 @media (prefers-color-scheme: dark){
     :root{
-        --text:#FEECED ;
+        /* --text:#FEECED ;
         --text-accent: #F8E8EE;
         --background: #090107;
         --background-accent: #040103;
         --primary: #F9808A;
         --secondary: #e32b47;
+        --accent: #ec73c2; */
+
+        /* Testing Light in Dark Mode (MY EYEEEESSS lololol) */
+        --text:black;
+        --text-accent: #F8E8EE;
+        --background: #FEECED;
+        --background-accent: #e6e6e6;
+        --primary: #F9808A;
+        --secondary: #e32b47;
         --accent: #ec73c2;
+        --dark:#090107;
     }
 }
 
@@ -41,11 +54,11 @@ html { scroll-behavior: smooth; scroll-padding-top: 72px}
 
 /* Default font and colours */
 /* body { font-family: 'Rubik', sans-serif } */
-body { font-family: 'Garamond', serif}
+body { font-family: 'Garamond', serif; background-color: var(--background)}
 h1, h2, h3 { color: #222; }
 p, li { color: var()}
 .bg-pastel-green { background-color: var(--background) }
-.bg-pastel-grey { background-color: #edf5f1 }
+.bg-pastel-grey { background-color: var(--background) }
 /* #endregion */
 
 /* ==== SCROLLBAR PROPERTIES  ==== */
@@ -228,10 +241,10 @@ body::-webkit-scrollbar-thumb:hover {
     /* style cta button on desktop menus */
     .container-menu-desktop ul li a.btn-cta{
         display: inline-block;
-        border-width: 2px;
-        border-style: solid;
+        border: 2px solid;
         /* font-weight: bold; */
         color: var(--text);
+        background-color: var(--white);
         /* text-shadow: 1px 2px 2px black; */
     }
 
@@ -448,7 +461,7 @@ body::-webkit-scrollbar-thumb:hover {
                 background-position: right 25%;
                 margin-top: 120px;
                 max-width: 100%;
-                height: 20%;
+                height: 30%;
                 border-bottom: 3px solid rgba(0, 0, 0, 0.25);  
                 /* border: 3px solid rgba(0, 0, 0, 0.75);  */
                 /* border-bottom: 3px solid rgba(255, 255, 255, 0.75);  */
@@ -459,7 +472,7 @@ body::-webkit-scrollbar-thumb:hover {
             .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {
                 font-family: 'Tangerine', sans-serif; 
                 /* color: rgba(255, 255, 255, 0.97);  */
-                color: var(--text);
+                color: var(--text-accent);
                 text-shadow: 1px 2px 2px black;
                 font-weight: 500; 
                 /* line-height: 1.1;
@@ -537,29 +550,54 @@ body::-webkit-scrollbar-thumb:hover {
         align-content: center;
     }
 /* ######################## STORY BLOCK  ################################3# */
+    /* Proper Spacing for Very Large Websites Story */
+    @media all and (min-width:1500px) {.story-container { margin: 5% 50% 5% 50%; }}
+
+    /* Mid Size screen */
+    @media all and (min-width:800px) {.story-container { margin: 5% 15% 5% 15%; }}
+
     .story-container{
         display: flex;
         justify-content: center; 
         background-color: var(--background);
+        background-color: var(--white);
+        border: 2px solid rgba(0, 0, 0, 0.25);
+        flex-grow: 0;
+        /* padding: 2% 8% 2% 8%; */
+        /* border-block-color: var(--b); */
     }
 
-    .story-container .story-item-1{
-        padding: 2% 2% 2% 2%; 
-    }
+    .story-container .story-item-1{padding: 2% 8% 2% 8%; }
 
     .story-container .story-item-1 h1{
-        color: var(--primary);
+        color: var(--primary); 
         margin-top: 2%; 
         text-align: center;
+        font-size: calc(30px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
+    }
+
+    .story-container .story-item-1 h2{
+        color: var(--text); 
+        font-weight: 500; 
+        text-align: center;
+        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));   
     }
 
     .story-container .story-item-1 p{
-        margin: 3% 5% 2% 2% ; 
+        /* margin: 3% 5% 2% 2% ;  */
         color: var(--text);
+        padding:3% 0 3% 0; 
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
+        /* border-bottom: 2px solid black; */
     }
 
 /* ######################## CONTENT BLOCK  ################################3# */
-    
+    /* Proper Spacing for Very Large Websites Story */
+    @media all and (min-width:1500px) {.body-container { margin: 5% 50% 5% 50%; }}
+
+    /* Mid Size screen */
+    @media all and (min-width:800px) {.body-container { margin: 5% 15% 5% 15%; }}
+
     .body-container{
         display: flex;
         flex-direction: row;
@@ -584,9 +622,8 @@ body::-webkit-scrollbar-thumb:hover {
     
     .body-container .body-item-1 h1,
     .body-container .body-item-3 h1{
-        padding-top: 10%;
         /* color: green; */
-        text-align: center;
+        text-align: left;
         font-size: calc(30px + (30 - 15) * ((100vw - 320px) / (1600 - 320))); 
         text-shadow: 1px 1px 1px black;
     }
@@ -597,53 +634,36 @@ body::-webkit-scrollbar-thumb:hover {
     .body-container .body-item-1 h2,
     .body-container .body-item-3 h2{
         padding-top: 2%;
-        color: var(--text-accent);
-        text-align: center; 
+        /* padding-left: 5%; */
+        color: var(--text);
+        text-align: left; 
         font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
     .body-container .body-item-1 p,
     .body-container .body-item-3 p{
-        padding: 2% 2% 2% 2%; 
+        padding: 2% 12% 2% 0%; 
         color: var(--text);
-        margin: 3%;
+        margin-bottom: 20%;
         /* flex-shrink: 3; */
     }
 
-    .body-container .body-item-2,
-    .body-container .body-item-4 {
-        width: 40%;
-        height: 40%;
-        /* flex-shrink: 3;
-        flex-grow: 1; */
+    .body-item-2, .body-item-4 {
         /* background-color: blue; */
-        padding: 3% 3% 3% 3%;
+        margin-bottom: 5%;
     }
 
     .body-container .body-item-2 img,
     .body-container .body-item-4 img {
         display: block;
-        margin: auto auto;
+        /* margin: auto; */
+        margin-left: auto;
         max-width: 70%;
         height: auto;
         /* border-radius: 2%; */
-        border: 2px solid yellow;
+        border: 2px solid rgba(0, 0, 0, 0.25);
         opacity: 75%;
     }
-
-    /* Order of Flexbox*/
-    /* .body-container .body-item-1{
-        order: 1;
-    }
-     .body-container .body-item-2{
-        order: 1;
-    }
-    .body-container .body-item-3{
-        order: 2;
-    }
-    .body-container .body-item-3{
-        order: 2;
-    } */
 
 /* ################ FOOTER CSS (SAME FOR BOTH MOBILE AND DESKTOP ################ */
     /*#region */
@@ -655,7 +675,8 @@ body::-webkit-scrollbar-thumb:hover {
         color:#ff0606;
         /* border: 2px solid #fffefe; */
         /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
-        background-color:var(--background-accent); 
+        background-color:var(--dark); 
+        border-top: 3px solid rgba(0, 0, 0, 0.25); 
     }
 
     /* FLEXBOX FOR FOOTER */
