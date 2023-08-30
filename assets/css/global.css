@@ -324,7 +324,6 @@ body::-webkit-scrollbar-thumb:hover {
     .flyout-menu { 
         position: fixed; display: block; 
         /*top: 72px; /* same height as menu bar */
-        margin-top: 80px;
         width: 320px; 
         max-height: 100%;
         height: 100%;
@@ -337,13 +336,16 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .flyout-menu.flyout-menu-is-closed {
+        margin-top: 80px;
+        top: 0;
         right: -320px; /* hides flyout menu */
-        background-color: var(--background);
+        /* background-color: var(--background); */
     }
 
     .flyout-menu.flyout-menu-is-open {
         /* margin-top: 8%; */
         /* FIX */
+        margin-top: 80px;
         background-color: var(--background);
         right: 0; /* displays flyout menu */
         overscroll-behavior: contain;
