@@ -640,6 +640,18 @@ body::-webkit-scrollbar-thumb:hover {
         .body-container .body-item-1 h2, .body-container .body-item-3 h2{ text-align: center; margin-top: 1%; padding: 0;}
         .body-container .body-item-1 p, .body-container .body-item-3 p{ text-align: center; margin: 4% 5% 5% 5%; padding: 0;}
         .body-container .body-item-2 img, .body-container .body-item-4 img{margin: auto;}
+        /* .body-container .body-item-4 img{ margin-bottom: 5%;} */
+        
+        /* Ordering containers for Mobile */
+        .body-container .body-item-2 { margin-top: 5%;}
+        .body-container .body-item-4 { margin-top: 5%;}
+        .body-container .body-item-1 p{ margin-bottom: 10%;}
+        .body-container .body-item-3 p{ margin-bottom: 15%;}
+        .body-container .body-item-1 { order: 1;}
+        .body-container .body-item-2 { order: 0;}
+        .body-container .body-item-3 { order: 2;}
+        .body-container .body-item-4 { order: 1;}
+        
     }
 
 
