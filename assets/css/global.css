@@ -16,22 +16,29 @@
         --primary: #F9808A;
         --secondary: #e32b47;
         --accent: #ec73c2;
-        --dark:#090107;
+        --footer:#090107;
+        --box: white;
+        --border: rgb(191,191,191);
+        --bm: black;
     }
 }
 
 @media (prefers-color-scheme: dark){
     :root{
-        /* --text:#FEECED ;
+        --text:#FEECED ;
         --text-accent: #F8E8EE;
         --background: #090107;
         --background-accent: #040103;
         --primary: #F9808A;
         --secondary: #e32b47;
-        --accent: #ec73c2; */
+        --accent: #ec73c2;
+        --footer: #31212d;
+        --box: #090107;
+        --border: #31212d;
+        --bm: #31212d;   
 
         /* Testing Light in Dark Mode (MY EYEEEESSS lololol) */
-        --text:black;
+        /* --text:black;
         --text-accent: #F8E8EE;
         --background: #FEECED;
         --background-accent: #e6e6e6;
@@ -39,6 +46,8 @@
         --secondary: #e32b47;
         --accent: #ec73c2;
         --dark:#090107;
+        --box: white;
+        --border: rgb(191,191,191) */
     }
 }
 
@@ -213,7 +222,7 @@ body::-webkit-scrollbar-thumb:hover {
         padding: 0 5% 0 5%;
         width: 100%;
         background-color: var(--background);
-        border-bottom: 2px solid rgba(0, 0, 0, 0.55);
+        border-bottom: 2px solid var(--bm);
     }
 
     /* menu links and cta button aligned horizontally */
@@ -244,7 +253,7 @@ body::-webkit-scrollbar-thumb:hover {
         border: 2px solid;
         /* font-weight: bold; */
         color: var(--text);
-        background-color: var(--white);
+        background-color: var(--box);
         /* text-shadow: 1px 2px 2px black; */
     }
 
@@ -560,8 +569,8 @@ body::-webkit-scrollbar-thumb:hover {
         display: flex;
         justify-content: center; 
         background-color: var(--background);
-        background-color: var(--white);
-        border: 2px solid rgba(0, 0, 0, 0.25);
+        background-color: var(--box);
+        border: 2px solid var(--border);
         flex-grow: 0;
         /* padding: 2% 8% 2% 8%; */
         /* border-block-color: var(--b); */
@@ -664,7 +673,7 @@ body::-webkit-scrollbar-thumb:hover {
         max-width: 70%;
         height: auto;
         /* border-radius: 2%; */
-        border: 2px solid rgba(0, 0, 0, 0.25);
+        border: 3px solid var(--border);
         opacity: 75%;
     }
 
@@ -678,8 +687,8 @@ body::-webkit-scrollbar-thumb:hover {
         color:#ff0606;
         /* border: 2px solid #fffefe; */
         /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
-        background-color:var(--dark); 
-        border-top: 3px solid rgba(0, 0, 0, 0.25); 
+        background-color:var(--footer); 
+        border-top: 3px solid var(--border); 
     }
 
     /* FLEXBOX FOR FOOTER */
