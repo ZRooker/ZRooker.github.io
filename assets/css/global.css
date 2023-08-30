@@ -470,8 +470,6 @@ body::-webkit-scrollbar-thumb:hover {
                 /* border: 3px solid rgba(0, 0, 0, 0.75);  */
                 /* border-bottom: 3px solid rgba(255, 255, 255, 0.75);  */
             }
-            .hero-flexbox.container-hero-block-one-columns h1 { margin-top: 2% }
-        
 
             .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {
                 font-family: 'Tangerine', sans-serif; 
@@ -487,7 +485,7 @@ body::-webkit-scrollbar-thumb:hover {
             }
     /* ===================== DESKTOP HERO BLOCK  ========================== */
     @media all and (min-width: 768px) {
-        .hero-flexbox.container-hero-block-one-columns { height: 30%; margin-top: 120px;}
+        .hero-flexbox.container-hero-block-one-columns { height: 25%; margin-top: 120px;}
         .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(90px + (90 - 30) * ((100vw - 320px) / (1600 - 320))); }
     }
     
