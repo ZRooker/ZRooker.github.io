@@ -25,7 +25,7 @@
 
 @media (prefers-color-scheme: dark){
     :root{
-        /* --text:#FEECED ;
+        --text:#FEECED ;
         --text-accent: #F8E8EE;
         --background: #090107;
         --background-accent: #040103;
@@ -35,19 +35,20 @@
         --footer: #31212d;
         --box: #090107;
         --border: #31212d;
-        --bm: #31212d;    */
+        --bm: #31212d;   
 
         /* Testing Light in Dark Mode (MY EYEEEESSS lololol) */
-        --text:black;
+       /* --text:black;
         --text-accent: #F8E8EE;
         --background: #FEECED;
         --background-accent: #e6e6e6;
         --primary: #F9808A;
         --secondary: #e32b47;
         --accent: #ec73c2;
-        --dark:#090107;
+        --footer:#090107;
         --box: white;
-        --border: rgb(191,191,191)
+        --border: rgb(191,191,191);
+        --bm: black; */
     }
 }
 
