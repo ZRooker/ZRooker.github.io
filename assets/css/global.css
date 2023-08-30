@@ -470,6 +470,8 @@ body::-webkit-scrollbar-thumb:hover {
                 /* border: 3px solid rgba(0, 0, 0, 0.75);  */
                 /* border-bottom: 3px solid rgba(255, 255, 255, 0.75);  */
             }
+            .hero-flexbox.container-hero-block-one-columns h1 { margin-top: 2% }
+        
 
             .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {
                 font-family: 'Tangerine', sans-serif; 
@@ -485,7 +487,7 @@ body::-webkit-scrollbar-thumb:hover {
             }
     /* ===================== DESKTOP HERO BLOCK  ========================== */
     @media all and (min-width: 768px) {
-        .hero-flexbox.container-hero-block-one-columns { height: 25%; margin-top: 120px;}
+        .hero-flexbox.container-hero-block-one-columns { height: 30%; margin-top: 120px;}
         .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(90px + (90 - 30) * ((100vw - 320px) / (1600 - 320))); }
     }
     
@@ -550,7 +552,10 @@ body::-webkit-scrollbar-thumb:hover {
 
     /* ===================== STORY BLOCK ON MOBILE  ========================== */
     /*#region*/
-    @media all and (max-width: 767px) {.story-container .story-item-1 p{ text-align: center;}}
+    @media all and (max-width: 767px) {
+        .story-container { margin: 5% 10% 3% 10%; }
+        .story-container .story-item-1 p{ text-align: center;}
+    }
 
 /* ######################## CONTENT BLOCK  ################################3# */
     /* Proper Spacing for Very Large Websites Story */
@@ -625,12 +630,17 @@ body::-webkit-scrollbar-thumb:hover {
         height: auto;
         /* border-radius: 2%; */
         border: 3px solid var(--border);
-        opacity: 75%;
+        /* opacity: 75%; */
     }
 
     /* ===================== CONTENT BLOCK ON MOBILE  ========================== */
     /*#region*/
-    @media all and (max-width: 767px) {.body-container .body-item-1 p{ text-align: center;}}
+    @media all and (max-width: 767px) {
+        .body-container .body-item-1 h1, .body-container .body-item-3 h1 { text-align: center; margin-top: 5%; padding: 0;}
+        .body-container .body-item-1 h2, .body-container .body-item-3 h2{ text-align: center; margin-top: 1%; padding: 0;}
+        .body-container .body-item-1 p, .body-container .body-item-3 p{ text-align: center; margin: 4% 5% 5% 5%; padding: 0;}
+        .body-container .body-item-2 img, .body-container .body-item-4 img{margin: auto;}
+    }
 
 
 /* ################ FOOTER CSS (SAME FOR BOTH MOBILE AND DESKTOP ################ */
