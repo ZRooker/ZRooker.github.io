@@ -112,26 +112,29 @@
         <h3>RSVP Here</h3>
         <!-- <p>Use the form below to let me know a little more about your objectives and I'll get back to you.</p> -->
         
-        <!-- Contact form starts here -->
-        <form action="https://formspree.io/f/mqkvbajg" method="POST">
-        <label>
-            Your email:
-            <input type="email" name="email">
-        </label>
-        <label>
-            Your message:
-            <textarea name="message"></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-        </form>
-
-            <!-- <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"> -->
-            <!-- End contact form fields -->
-
-        <!-- </form> -->
-        <!-- Contact form ends here -->
-
+        <!-- Contact form starts here -->  
+        <form id="fs-frm" name="basic-rsvp-form" accept-charset="utf-8" action="https://formspree.io/f/mqkvbajg" method="post">
+            <fieldset id="fs-frm-inputs">
+              <label for="full-name">Full Name</label>
+              <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+              <label for="attending">Will you Attend?</label>
+              <select name="attending" id="attending" required="">
+                  <option value="" selected="" disabled="">Select</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select>
+              <label for="plus">And with how many guests?</label>
+              <select name="plus" id="plus" required="">
+                  <option value="0" selected="">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+              </select>
+              <input type="hidden" name="_subject" id="email-subject" value="RSVP">
+            </fieldset>
+            <input type="submit" value="RSVP">
+          </form>
+           
     </div>
     <!-- End container for contact form -->
 
