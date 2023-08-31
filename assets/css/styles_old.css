@@ -1,44 +1,9 @@
 /* Color Pallet */
 :root {
     --w: #F8E8EE;
-    --white: white; 
     --b: black;
     --lb: lightblue;
 }
-
-/* ====== Implementing Light and Dark Mode ====== */
-@media (prefers-color-scheme: light){
-    :root{
-        --text:black;
-        --text-accent: #F8E8EE;
-        --background: #FEECED;
-        --background-accent: #e6e6e6;
-        --primary: #F9808A;
-        --secondary: #e32b47;
-        --accent: #ec73c2;
-        --footer:#090107;
-        --box: white;
-        --border: rgb(191,191,191);
-        --bm: black;
-    }
-}
-
-@media (prefers-color-scheme: dark){
-    :root{
-        --text:#FEECED ;
-        --text-accent: #F8E8EE;
-        --background: #090107;
-        --background-accent: #040103;
-        --primary: #F9808A;
-        --secondary: #e32b47;
-        --accent: #ec73c2;
-        --footer: #31212d;
-        --box: #090107;
-        --border: #31212d;
-        --bm: #31212d;   
-    }
-}
-
 
 /* ##################### OVERALL PROPERTIES #################### */
 /* #region */
@@ -51,11 +16,11 @@ html { scroll-behavior: smooth; scroll-padding-top: 72px}
 
 /* Default font and colours */
 /* body { font-family: 'Rubik', sans-serif } */
-body { font-family: 'Garamond', serif; background-color: var(--background)}
+body { font-family: 'Garamond', serif}
 h1, h2, h3 { color: #222; }
-p, li { color: var()}
-.bg-pastel-green { background-color: var(--background) }
-.bg-pastel-grey { background-color: var(--background) }
+p, li { color: #403d50}
+.bg-pastel-green { background-color: var(--text-color) }
+.bg-pastel-grey { background-color: #edf5f1 }
 /* #endregion */
 
 /* ==== SCROLLBAR PROPERTIES  ==== */
@@ -192,10 +157,10 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: row; 
   align-items: center; 
   font-size: 50px;
-  color: var(--text);
+  color: white;
   font-weight: 500;
   font-family: 'Tangerine', serif;
-  /* text-shadow: 1px 1px 1px black; */
+  text-shadow: 1px 1px 1px black;
 }
 /*#endregion */
 
@@ -208,8 +173,6 @@ body::-webkit-scrollbar-thumb:hover {
         justify-content: space-between;
         padding: 0 5% 0 5%;
         width: 100%;
-        background-color: var(--background);
-        border-bottom: 2px solid var(--bm);
     }
 
     /* make desktop menu options bold */
@@ -232,8 +195,8 @@ body::-webkit-scrollbar-thumb:hover {
     .container-menu-desktop ul li a {
         font-size: calc(20px + (19 - 15) * ((100vw - 320px)/(1600 - 320)));
         /* font-weight:bold */
-        color: var(--text);
-        /* text-shadow: 1px 1px 1px black; */
+        color: white;
+        text-shadow: 1px 1px 1px black;
         /* text-transform: uppercase */
     }
 
@@ -243,9 +206,8 @@ body::-webkit-scrollbar-thumb:hover {
         border-width: 2px;
         border-style: solid;
         /* font-weight: bold; */
-        color: var(--text);
-        background-color: var(--box);
-        /* text-shadow: 1px 2px 2px black; */
+        color: var(--w);
+        text-shadow: 1px 2px 2px black;
     }
 
     /* cta button padding */
@@ -254,17 +216,17 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* ========== MOBILE MENU PROPERTIES  ========== */
     /*#region */
-    .container-menu-bar-mobile{ height: 80px;}
+
     .container-menu-bar-mobile h1 { 
         display: flex; 
         flex-direction: row; 
         align-items: center; 
         padding-top: 5%;
         font-size: 40px;
-        color: var(--text);
+        color: white;
         font-weight: 500;
         font-family: 'Tangerine', serif;
-        /* text-shadow: 1px 1px 1px black; */
+        text-shadow: 1px 1px 1px black;
     }
 
     /* style cta button on mobile menu */
@@ -273,7 +235,7 @@ body::-webkit-scrollbar-thumb:hover {
         border-width: 2px;  
         border-style: solid;
         font-weight: bold;
-        color: var(--text);
+        color: var(--b);
         /* text-shadow: 1px 2px 2px rgb(255, 0, 0); */
     }
 
@@ -294,9 +256,9 @@ body::-webkit-scrollbar-thumb:hover {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 0 6% 2% 6%;
-        background-color:var(--background);
-        border-bottom: 2px solid var(--border)
+        padding: 0 6% 0 6%;
+        /* background-color:rgba(0, 0, 0, 0.97); */
+        /* background-color:transparent; */
     }
 
     /* three bars hozizontal in hamburger icon */
@@ -325,15 +287,10 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .flyout-menu.flyout-menu-is-closed {
-        margin-top: 80px;
-        top: 0;
         right: -320px; /* hides flyout menu */
     }
 
     .flyout-menu.flyout-menu-is-open {
-        
-        margin-top: 80px;
-        background-color: var(--background);
         right: 0; /* displays flyout menu */
         overscroll-behavior: contain;
         overscroll-behavior-y: contain
@@ -341,7 +298,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     /* drop shadow border at left of fly-out menu */
     .flyout-menu.flyout-menu-is-open {
-        box-shadow: 0px 1px 10px var(--border); 
+        box-shadow: 0px 1px 10px #888 
     }
 
     /* Menu List Home, Our Story... */
@@ -351,17 +308,16 @@ body::-webkit-scrollbar-thumb:hover {
     /* style flyout menu links */
     .flyout-menu ul li a {
         font-size: 25px;
-        color: var(--text);
+        color: var(--b);
         /* font-weight:bold; */
         /* text-transform: uppercase */
-        /* text-shadow: 4px 4px 4px #aaa; */
+        text-shadow: 4px 4px 4px #aaa;
     }
 
     /* cta button */
     .flyout-menu a.btn-cta {
         display: inline-block;
         padding: 10px 24px;
-        background-color: var(--box);
     }
 
     .flyout-menu hr { 
@@ -419,18 +375,18 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     /* on mobiles only */
-    .flyout-menu.menu-light { background-color: var(--background) }
+    .flyout-menu.menu-light { background-color: white }
     .menu-light.flyout-menu hr { background-color:#461111(80,227,194); border-color: #461111(80,227,194) } 
 
     .menu-light.flyout-menu h4,
     .menu-light.flyout-menu h5,
     .menu-light.flyout-menu h5 a, 
-    .menu-light.flyout-menu p { color: var(--text)} 
+    .menu-light.flyout-menu p { color: rgba(0, 0, 0, 0.75)} 
 
     /* colour of hamburger icon bars */
     .menu-light .item-icon .bar1, 
     .menu-light .item-icon .bar2, 
-    .menu-light .item-icon .bar3 { background-color:var(--text);}	
+    .menu-light .item-icon .bar3 { background-color:white;}	
 
     /* phone number link */
     a[href^=tel] { text-decoration: none; color: red }
@@ -450,7 +406,7 @@ body::-webkit-scrollbar-thumb:hover {
     .menu-light.flyout-menu.flyout-menu-is-open div.fly-out-profile-box img { border-color: #461111(80,227,194) }
 
     /* contact icons */
-    .menu-light.flyout-menu .fly-out-social-icons a i { color: var(--primary) }
+    .menu-light.flyout-menu .fly-out-social-icons a i { color: #461111(80,227,194) }
 /*#endregion */
 
 /* ######################## HERO BLOCK  ################################3# */
@@ -458,7 +414,7 @@ body::-webkit-scrollbar-thumb:hover {
     /*#region*/
         @media all and (min-width: 768px) {
             .container-flexbox.container-hero-block-two-columns { 
-                background-color:  var(--background);
+                background-color: #ECDBBA;
                 background-image: url(/assets/img/L1130302b.jpg);
                 background-repeat: no-repeat, repeat;
                 background-size: cover;
@@ -588,9 +544,7 @@ body::-webkit-scrollbar-thumb:hover {
         flex-wrap: wrap;
         color:#ff0606;
         /* border: 2px solid #fffefe; */
-        /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
-        background-color: var(--footer); 
-        border-top: 3px solid var(--border); 
+        background-color:rgba(0, 0, 0, 0.97);   /*Bottom Color*/
     }
 
     /* FLEXBOX FOR FOOTER */

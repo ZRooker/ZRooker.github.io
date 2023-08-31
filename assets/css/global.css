@@ -747,8 +747,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .container-footer .flex-item-2  ul.footer-links {
-        margin: 0 auto 18p
-            x auto;
+        margin: 0 auto 18px auto;
     }
 
     .container-footer .flex-item-2 ul.footer-icons {
