@@ -846,24 +846,10 @@ body::-webkit-scrollbar-thumb:hover {
         justify-content: center;
         align-content: center;
         flex-wrap: wrap; */
-        background-color: red;
-        /* margin: 10%; */
+        background-color: var(--box);
+        margin: 10%;
+        border: 4px solid var(--border);
     }
-
-
-    .container-contact-form #fs-frm{
-        /* margin: 10%; */
-        }
-
-    /* .contract-item-1{
-        background-color: yellow;
-        padding: 2%;
-    }
-
-     .contract-item-2{
-        background-color: yellow;
-        padding: 1%;
-    } */
 
      .container-contact-form label,
      .container-contact-form input,
@@ -874,7 +860,10 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     label {
-    font-weight: bold; /* Make labels bold */
+        font-weight: bold; /* Make labels bold */
+        padding: 2%;
+        color: var(--text);
+        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
 
@@ -882,16 +871,17 @@ body::-webkit-scrollbar-thumb:hover {
     input[type="text"], select {
         align-content: center; 
         width: 50%; /* Make fields expand to full width */
-        padding: 1%; 
+        padding: 1.2%; 
         /* border: 1px solid #ccc;  */
         /* border-radius: 5px;  */
         margin: auto auto; 
+        background-color: var(--w);
     }
 
     /* Style the submit button */
     input[type="submit"] {
         background-color: var(--primary);
-        color: white;
+        color: var(--text);
         padding: 2%;
         border: 2px solid var(--border);
         border-radius: 5px;
@@ -902,16 +892,19 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
 
-    .container-contact-form .contract-item-1 h3{
+    .container-contact-form .contract-item-1 h1{
         display: flex;
         justify-content: center;
         padding: 2%;
     }
 
     .container-contact-form .contract-item-2,
-    .container-contact-form .contract-item-3,
-    .container-contact-form .contract-item-4{
+    .container-contact-form .contract-item-3{
         padding: 2% 0% 2% 0%;  
+    }
+
+    .container-contact-form .contract-item-4{
+        padding: 2% 0% 20% 0%;  
     }
 
     
