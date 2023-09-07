@@ -847,16 +847,14 @@ body::-webkit-scrollbar-thumb:hover {
         align-content: center;
         flex-wrap: wrap; */
         background-color: red;
+        /* margin: 10%; */
     }
 
 
-    /* .container-contact-form#fs-frm{
-        display: flex; 
-        justify-content: center; 
-        align-content: center; 
-        
-    }
- */
+    .container-contact-form #fs-frm{
+        /* margin: 10%; */
+        }
+
     /* .contract-item-1{
         background-color: yellow;
         padding: 2%;
@@ -873,8 +871,6 @@ body::-webkit-scrollbar-thumb:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* height: 100vh;  */
-        /* margin: 10%; */
     }
 
     label {
@@ -886,25 +882,37 @@ body::-webkit-scrollbar-thumb:hover {
     input[type="text"], select {
         align-content: center; 
         width: 50%; /* Make fields expand to full width */
-        padding: 10px; /* Add padding for better spacing */
-        border: 1px solid #ccc; /* Add a border */
-        border-radius: 5px; /* Round the corners */
+        padding: 1%; 
+        /* border: 1px solid #ccc;  */
+        /* border-radius: 5px;  */
+        margin: auto auto; 
     }
 
     /* Style the submit button */
     input[type="submit"] {
-        background-color: #007BFF;
+        background-color: var(--primary);
         color: white;
-        padding: 10px 20px;
-        border: none;
+        padding: 2%;
+        border: 2px solid var(--border);
         border-radius: 5px;
         cursor: pointer;
         font-weight: bold;
-    }
-
-
-    .container-contact-form h3{
-        display: flex;
-        justify-content: center;
+        margin: auto auto; 
         
     }
+
+
+    .container-contact-form .contract-item-1 h3{
+        display: flex;
+        justify-content: center;
+        padding: 2%;
+    }
+
+    .container-contact-form .contract-item-2,
+    .container-contact-form .contract-item-3,
+    .container-contact-form .contract-item-4{
+        padding: 2% 0% 2% 0%;  
+    }
+
+    
+
