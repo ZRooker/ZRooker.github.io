@@ -869,9 +869,9 @@ body::-webkit-scrollbar-thumb:hover {
 
     /* Editing the Form */
     input[type="text"], select {
-        align-content: center; 
         width: 50%; /* Make fields expand to full width */
         padding: 1.2%; 
+        font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));
         /* border: 1px solid #ccc;  */
         /* border-radius: 5px;  */
         margin: auto auto; 
@@ -899,13 +899,17 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .container-contact-form .contract-item-2,
+    .container-contact-form .contract-item-3,
     .container-contact-form .contract-item-3{
-        padding: 2% 0% 2% 0%;  
+        padding: 1% 0% 1% 0%;  
     }
 
-    .container-contact-form .contract-item-4{
-        padding: 2% 0% 20% 0%;  
+    .container-contact-form .contract-item-5{
+        padding: 1% 0% 3% 0%;  
     }
 
-    
+    #fs-frm-inputs{
+        border: none; 
+    }
+
 
