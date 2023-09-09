@@ -465,6 +465,7 @@ body::-webkit-scrollbar-thumb:hover {
             .hero-flexbox.container-hero-block-one-columns { 
                 background-color: var(--background);
                 background-image: url(/assets/img/L1130068.jpg);
+                
                 background-repeat: no-repeat, repeat;
                 background-size: cover;
                 background-position: right 25%;
@@ -630,7 +631,7 @@ body::-webkit-scrollbar-thumb:hover {
         display: block;
         /* margin: auto; */
         margin-left: auto;
-        max-width: 70%;
+        max-width: 50%;
         height: auto;
         /* border-radius: 2%; */
         border: 3px solid var(--border);
@@ -943,5 +944,9 @@ body::-webkit-scrollbar-thumb:hover {
         font-family: 'Garamond', serif;
     }
 
+    textarea#message:active,
+    textarea#message:hover{
+        opacity: 80%;
+    }
 
 
