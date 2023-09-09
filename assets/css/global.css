@@ -912,4 +912,8 @@ body::-webkit-scrollbar-thumb:hover {
         border: none; 
     }
 
+    textarea#message{
+        background-color: red;
+    }
+
 
