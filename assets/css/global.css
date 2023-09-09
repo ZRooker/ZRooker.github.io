@@ -853,7 +853,8 @@ body::-webkit-scrollbar-thumb:hover {
 
      .container-contact-form label,
      .container-contact-form input,
-     .container-contact-form select {
+     .container-contact-form select,
+     .container-contact-form textarea{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -913,9 +914,15 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     textarea#message{
-        background-color: yellow;
-        border: 2 px red;
-        
+        background-color: var(--w);
+        border: 2px solid var(--border);
+        /* display: block; */
+        margin: auto auto;
+        resize: none;
+        overflow-y: scroll;
+        width: 50%;
+        height: 100%;
+        padding: 1%;
     }
 
 
