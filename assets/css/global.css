@@ -166,6 +166,9 @@ body::-webkit-scrollbar-thumb:hover {
     .menu-light ul li a:active {
         /* color: var(--text-color); */
         color: var(--lb);
+        padding-bottom: 2%;
+        border-bottom: 2px solid var(--lb);
+        /* transition: .3s; */
         /* font-weight: bold; */
     }
 
@@ -173,8 +176,9 @@ body::-webkit-scrollbar-thumb:hover {
     .menu-light ul li a.btn-cta:hover,
     .menu-light ul li a.btn-cta:active {
         border-color: var(--lb);
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: var(--box);
         color: var(--lb);
+        /* transition: .3s; */
     }
 
 
@@ -487,8 +491,8 @@ body::-webkit-scrollbar-thumb:hover {
             }
     /* ===================== DESKTOP HERO BLOCK  ========================== */
     @media all and (min-width: 768px) {
-        .hero-flexbox.container-hero-block-one-columns { height: 30%; margin-top: 120px;}
-        .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(90px + (90 - 30) * ((100vw - 320px) / (1600 - 320))); }
+        .hero-flexbox.container-hero-block-one-columns { height: 25%; margin-top: 120px;}
+        .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(60px + (60 - 30) * ((100vw - 320px) / (1600 - 320))); }
     }
     
     /* ===================== HERO BLOCK ON MOBILE  ========================== */
@@ -841,13 +845,8 @@ body::-webkit-scrollbar-thumb:hover {
 
     /* ############### RSVP PAGE ############## */
     .container-contact-form {
-        /* display: flex; 
-        /* flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap; */
         background-color: var(--box);
-        margin: 10%;
+        margin: 4% 25% 4% 25% ;
         border: 4px solid var(--border);
     }
 
@@ -861,7 +860,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     label {
-        font-weight: bold; /* Make labels bold */
+        /* font-weight: bold;  */
         padding: 2%;
         color: var(--text);
         font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
@@ -877,6 +876,15 @@ body::-webkit-scrollbar-thumb:hover {
         /* border-radius: 5px;  */
         margin: auto auto; 
         background-color: var(--w);
+        border: 1px solid var(--b);
+        font-family: 'Garamond', serif;
+        /* color: rgb(124, 124, 124); */
+    }
+
+    input[type="text"]:hover, select:hover,
+    input[type="text"]:active, select:active{
+        /* border: 2px solid var(--b); */
+        opacity: 70%;
     }
 
     /* Style the submit button */
@@ -885,24 +893,33 @@ body::-webkit-scrollbar-thumb:hover {
         color: var(--text);
         padding: 2%;
         border: 2px solid var(--border);
-        border-radius: 5px;
         cursor: pointer;
         font-weight: bold;
-        margin: auto auto; 
+        margin: 2% auto 5% auto; 
+        width: 50%;
+        height: 10%;
+        border: 2px solid var(--text);
+        font-family: 'Tangerine', serif;
+        font-weight: 1000;
+        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
+        border-radius: 10px;
         
     }
-
+    input[type="submit"]:hover {
+        background-color: var(--secondary);
+        transition: .5s;
+    }
 
     .container-contact-form .contract-item-1 h1{
         display: flex;
         justify-content: center;
-        padding: 2%;
+        padding: 5%;
     }
 
     .container-contact-form .contract-item-2,
     .container-contact-form .contract-item-3,
     .container-contact-form .contract-item-3{
-        padding: 1% 0% 1% 0%;  
+        padding: 2% 0% 1% 0%;  
     }
 
     .container-contact-form .contract-item-5{
@@ -915,14 +932,16 @@ body::-webkit-scrollbar-thumb:hover {
 
     textarea#message{
         background-color: var(--w);
-        border: 2px solid var(--border);
         /* display: block; */
         margin: auto auto;
         resize: none;
         overflow-y: scroll;
         width: 50%;
         height: 100%;
-        padding: 1%;
+        padding: 1.2%;
+        font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));
+        font-family: 'Garamond', serif;
     }
+
 
 
