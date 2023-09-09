@@ -915,6 +915,7 @@ body::-webkit-scrollbar-thumb:hover {
     textarea#message{
         background-color: yellow;
         border: 2 px red;
+        
     }
 
 
