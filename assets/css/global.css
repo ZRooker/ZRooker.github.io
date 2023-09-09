@@ -459,48 +459,61 @@ body::-webkit-scrollbar-thumb:hover {
 /*#endregion */
 /* #endregion */
 
-/* ######################## HERO BLOCK  ################################3# */
-    /* ===================== OVERALL HERO BLOCK  ========================== */
-    /*#region*/
-            .hero-flexbox.container-hero-block-one-columns { 
-                background-color: var(--background);
-                background-image: url(/assets/img/L1130068.jpg);
-                
-                background-repeat: no-repeat, repeat;
-                background-size: cover;
-                background-position: right 25%;
-                max-width: 100%;
-                /* height: 30%; */
-                border-bottom: 3px solid rgba(0, 0, 0, 0.25);  
-                /* border: 3px solid rgba(0, 0, 0, 0.75);  */
-                /* border-bottom: 3px solid rgba(255, 255, 255, 0.75);  */
-            }
-            .hero-flexbox.container-hero-block-one-columns h1 { margin-top: 2% }
-        
+/* ######################## HERO & HOME BLOCK  ################################# */
+    .home-flexbox.container-home-block-one-columns,
+    .hero-flexbox.container-hero-block-one-columns{ 
+        background-repeat: no-repeat, repeat;
+        background-size: cover;
+        max-width: 100%;
+    }
 
-            .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {
-                font-family: 'Tangerine', sans-serif; 
-                /* color: rgba(255, 255, 255, 0.97);  */
-                color: var(--text-accent);
-                text-shadow: 1px 2px 2px black;
-                font-weight: 500; 
-                /* line-height: 1.1;
-                margin-bottom: 20px; */
-                text-align: center;
-                /* letter-spacing:-2px; */
-                /* margin-top: 90%; */
-            }
-    /* ===================== DESKTOP HERO BLOCK  ========================== */
+    .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1,
+    .home-flexbox.container-home-block-one-columns .hero-item-home h1 {
+        font-family: 'Tangerine', sans-serif; 
+        color: var(--text-accent);
+        text-shadow: 1px 2px 2px black;
+        font-weight: 500; 
+        text-align: center;
+    }
+
+    /* ===================== DESKTOP HERO & HOME BLOCK  ========================== */
     @media all and (min-width: 768px) {
-        .hero-flexbox.container-hero-block-one-columns { height: 25%; margin-top: 120px;}
+        .hero-flexbox.container-hero-block-one-columns,
+        .home-flexbox.container-home-block-one-columns {margin-top: 115px;}
+
+        .hero-flexbox.container-hero-block-one-columns {height: 25%;}
         .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(60px + (60 - 30) * ((100vw - 320px) / (1600 - 320))); }
     }
     
-    /* ===================== HERO BLOCK ON MOBILE  ========================== */
+    /* ===================== HERO & HOME BLOCK ON MOBILE  ========================== */
     @media all and (max-width: 768px) {
-        .hero-flexbox.container-hero-block-one-columns { height: 15%; margin-top: 80px; }
+        .hero-flexbox.container-hero-block-one-columns,
+        .home-flexbox.container-home-block-one-columns { margin-top: 80px; }
+
+        .hero-flexbox.container-hero-block-one-columns {height: 15%;}
         .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(50px + (40 - 30) * ((100vw - 320px) / (1600 - 320))); }
     }
+    
+/* ######################## HOME BLOCK  ################################# */
+/* ONLY FOR THE HOME PAGE */
+    .home-flexbox.container-home-block-one-columns { 
+        background-image: url(/assets/img/L1130302b.jpg);
+        background-position: center center;
+        height: 60%;
+        border: 3px solid rgba(0, 0, 0, 0.75); 
+    }    
+
+/* ######################## HERO BLOCK  ################################# */
+    /* ===================== OVERALL HERO BLOCK  ========================== */
+    /*#region*/
+        .hero-flexbox.container-hero-block-one-columns { 
+            background-color: var(--background);
+            background-image: url(/assets/img/L1130068.jpg);
+            background-position: right 25%;
+            border-bottom: 3px solid rgba(0, 0, 0, 0.25);  
+        }
+    
+        .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 { margin-top: 10% }
 
 /* ============== FLEXBOX MULTI-COLUMN LAYOUTS ================== */
 
@@ -513,6 +526,8 @@ body::-webkit-scrollbar-thumb:hover {
         align-content: center;
     }
 /* ######################## STORY BLOCK  ################################3# */
+    /* Note story-item-home is for home page. story-item-1 is global */
+
     /* Proper Spacing for Very Large Websites Story */
     @media all and (min-width:1500px) {.story-container { margin: 5% 50% 5% 50%; }}
 
@@ -522,6 +537,8 @@ body::-webkit-scrollbar-thumb:hover {
     .story-container{
         display: flex;
         justify-content: center; 
+        align-content: center;
+        flex-direction: column;
         background-color: var(--background);
         background-color: var(--box);
         border: 2px solid var(--border);
@@ -530,30 +547,75 @@ body::-webkit-scrollbar-thumb:hover {
         /* border-block-color: var(--b); */
     }
 
+    .story-item-home{
+        margin: 10% 0 10% 0;
+    }
+
     .story-container .story-item-1{padding: 2% 8% 2% 8%; }
 
-    .story-container .story-item-1 h1{
+    .story-container h1{
         color: var(--primary); 
-        margin-top: 2%; 
         text-align: center;
         text-shadow: 1px 1px 1px black;
-        font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
-    .story-container .story-item-1 h2{
+    .story-container .story-item-1 h1{margin-top: 2%; font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
+    .story-container .story-item-home h1{font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
+
+    .story-container h2{
         color: var(--text); 
         font-weight: bold; 
-        text-align: center;
-        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320)));   
+        text-align: center;  
     }
 
-    .story-container .story-item-1 p{
-        /* margin: 3% 5% 2% 2% ;  */
+    .story-container .story-item-1 h2{font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); }
+    .story-container .story-item-home h2{font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); }
+
+    .story-container .story-item-1 p,
+    .story-container .story-item-1 h3,
+    .story-container .story-item-home h3, 
+    .story-container .story-item-home p#demo{
         color: var(--text);
-        padding:3% 0 3% 0; 
+        /* padding:3% 0 3% 0;  */
         font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
-        /* border-bottom: 2px solid black; */
     }
+
+    .story-container .story-item-1 p,
+    .story-container .story-item-1 h3{padding:3% 0 3% 0; }
+
+    .story-container .story-item-home h3, p#demo{ text-align: center;}
+    /* Calling the countdown clock */
+    p#demo{
+        margin: 2%;
+        padding: 0;
+    }
+
+    /* Nesting a FlexBox */
+    .story-item-home-2{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .story-container .story-item-home-2 a.btn-cta{
+        border: 2px solid var(--b);
+        /* font-weight: bold; */
+        color: var(--text);
+        background-color: var(--secondary);
+        /* text-shadow: 1px 2px 2px black; */
+        width: 30%;
+        padding: 1%;
+        margin-bottom: 2%;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .story-container .story-item-home-2 a.btn-cta:hover{
+        /* color: var(--lb); */
+        /* border: 2px solid var(--lb); */
+        background-color: var(--primary);
+        transition: .5s;
+    }
+    
 
     /* ===================== STORY BLOCK ON MOBILE  ========================== */
     /*#region*/
