@@ -913,7 +913,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     textarea#message{
-        background-color: red;
+        background-color: yellow;
     }
 
 
