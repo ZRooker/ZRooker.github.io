@@ -44,7 +44,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="registry/index.html">Registry </a></li>
             <li><a href="story/index.html">Our Story </a></li>
-            <li><a href="contact/index.html" class="btn-cta">RSVP &nbsp;<i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="contact/index.html" class="btn-cta">RSVP&nbsp;<i class="fas fa-arrow-right"></i></a></li>
         </ul>
     </div>
     <!-- End desktop menu -->
@@ -68,7 +68,7 @@
            <li><a href="index.html">Home</a></li>
             <li><a href="registry/index.html">Registry </a></li>
             <li><a href="story/index.html">Our Story </a></li>
-            <li><a href="contact/index.html" class="btn-cta">RSVP &nbsp;<i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="contact/index.html" class="btn-cta">RSVP&nbsp;<i class="fas fa-arrow-right"></i></a></li>
         </ul>  
         <hr>
         <h4>Save The Date!</h4>
@@ -95,6 +95,7 @@
 
 <!-- ############### HOME ################# -->
    <!-- Begin hero block -->
+<body class = ".home-body-background">
 <div class="home-flexbox container-home-block-one-columns unhide-content-under-sticky-menu">
     <div class = "hero-item-home">
         <!-- <h1>Lauren & Zarek</h1> -->
@@ -102,7 +103,7 @@
         <h3>May 18th, 2023</h3>  -->
     </div>
 </div>
-
+</body>
 <!-- ############### STORY ################# -->
     <!-- Begin container for contact form -->
     <div class="story-container"> 
@@ -113,7 +114,7 @@
             <h3>Sparrow Beginnings, Stillwater OK</h3>
         </div>
         <div class = "story-item-home-2 slide-in-left">
-            <a href="contact/index.html" class="btn-cta">RSVP &nbsp;<i ></i></a></li>
+            <a href="contact/index.html" class="btn-cta">RSVP&nbsp;<i ></i></a></li>
         </div>
         <div class = "story-item-3 slide-in-left"></div>
     </div>
@@ -123,17 +124,9 @@
 <!-- ############### BODY ################# -->
 <div class="body-container"> 
     <div class = "body-item-1 slide-in-left">
-        <h1>Meet The Bride </h1>
-        <h2>XXXX XXXX </h2>
-        <p>A few minor adjustments, as discussed above, 
-            can help you make a big impact on your CSS code file. 
-            So, try your hand at these simple ways to improve your CSS skills 
-            so that you can write cleaner and better CSS code. A few minor adjustments, as discussed above, 
-            can help you make a big impact on your CSS code file. 
-            So, try your hand at these simple ways to improve your CSS skills 
-            so that you can write cleaner and better CSS code.</p> 
+        <h1>Gallery</h1>
     </div>
-    <div class = "body-item-2 slide-in-left"><a ><img src="../assets/img/Bride.jpg" alt="Bride Picture"></a></div>
+    <!-- <div class = "body-item-2 slide-in-left"><a ><img src="../assets/img/Bride.jpg" alt="Bride Picture"></a></div>
     <div class = "body-item-3 slide-in-left">
         <h1>Meet The Groom </h1>
         <h2>XXXX XXXX </h2>
@@ -145,7 +138,7 @@
             So, try your hand at these simple ways to improve your CSS skills 
             so that you can write cleaner and better CSS code.</p> 
     </div>
-    <div class = "body-item-4 slide-in-left"><a ><img src="../assets/img/Groom.jpg" alt="Groom Picture"></a></div>
+    <div class = "body-item-4 slide-in-left"><a ><img src="../assets/img/Groom.jpg" alt="Groom Picture"></a></div> -->
 </div>
 
    <!-- ############### FOOTER ################# -->
@@ -250,8 +243,10 @@
 		function swapMenuStyle() {
 			if (window.pageYOffset > stickyDesktop) {
 				headerDesktop.classList.add("menu-drop-shadow");
+                headerDesktop.classList.add("menu-drop-height");
 			} else {
 				headerDesktop.classList.remove("menu-drop-shadow");
+                headerDesktop.classList.remove("menu-drop-height");
 			}
 		}
 
