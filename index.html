@@ -250,8 +250,10 @@
 		function swapMenuStyle() {
 			if (window.pageYOffset > stickyDesktop) {
 				headerDesktop.classList.add("menu-drop-shadow");
+                headerDesktop.classList.add("menu-drop-height");
 			} else {
 				headerDesktop.classList.remove("menu-drop-shadow");
+                headerDesktop.classList.add("menu-drop-height");
 			}
 		}
 

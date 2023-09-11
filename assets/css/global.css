@@ -147,6 +147,8 @@ body::-webkit-scrollbar-thumb:hover {
     /* Height of desktop menu and mobile menu bar */
     .container-menu-desktop{ height:120px }
 
+    .menu-drop-height{ height: 50px;}
+
     /* hide bullet character on listed links */
     .container-menu-desktop ul li,
     .flyout-menu            ul li { list-style-type: none }
