@@ -731,12 +731,6 @@ body::-webkit-scrollbar-thumb:hover {
     /*#region */
     /* Outer footer parent container */
     .container-footer { 
-        display: flex;
-        align-items: stretch;
-        flex-wrap: wrap;
-        color:#ff0606;
-        /* border: 2px solid #fffefe; */
-        /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
         background-color: var(--footer); 
         border-top: 3px solid var(--border); 
     }
@@ -749,20 +743,43 @@ body::-webkit-scrollbar-thumb:hover {
         flex: 1;
         /* border: 1px solid #fffefe; */
     }
-
-    .container-footer .flex-item-1 { 
-        text-align: left;
+     /* Desktop footer */
+    @media all and (min-width:768px) {
+        .container-footer { 
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap; 
+        }
+        
+        .container-footer .flex-item-1 { 
+            text-align: left;
+        }
+    
+        .container-footer .flex-item-2 { 
+            flex: 1 1 0; /* Each flex item will have an equal share of the available space */
+            text-align: center;
+        }
+    
+        .container-footer .flex-item-3 { 
+            text-align: right;
+        }
     }
 
-    .container-footer .flex-item-2 { 
-        flex: 1 1 0; /* Each flex item will have an equal share of the available space */
-        text-align: center;
+     /* Mobile footer -  */
+    @media all and (max-width:767px) {
+        .container-footer { 
+            display:center; 
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container-footer .flex-item-1,
+        .container-footer .flex-item-2,
+        .container-footer .flex-item-3{ text-align: center;}
+        /* .container-footer .flex-item-1{order: 0;}
+        .container-footer .flex-item-2{order: 0;}
+        .container-footer .flex-item-3{order: 0;} */
     }
-
-    .container-footer .flex-item-3 { 
-        text-align: right;
-    }
-
+    
     /* Desktop footer - inside padding  */
     @media all and (min-width:768px) {
         .container-footer { padding: 1% 1% 1% 1% }
@@ -790,7 +807,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-family: serif;
     font-weight: normal;
     font-style: italic;
-    font-size: calc(5px + (25 - 5) * ((100vw - 320px)/(1600 - 320)));
+    font-size: calc(15px + (25 - 15) * ((100vw - 320px)/(1600 - 320)));
     margin: 0 auto 10px 0;
     }
 
@@ -800,13 +817,13 @@ body::-webkit-scrollbar-thumb:hover {
         font-style:  italic;
         color: var(--lb);
         margin: 0 auto 20px auto;
-        font-size: calc(2px + (14 - 2) * ((100vw - 320px)/(1600 - 320)));
+        font-size: calc(12px + (14 - 12) * ((100vw - 320px)/(1600 - 320)));
     }
 
     .container-footer .flex-item-2 h6 {
         font-family: 'Tangerine', serif;
         font-weight: normal;
-        font-size: calc(15px + (40 - 15) * ((100vw - 320px)/(1600 - 320)));
+        font-size: calc(25px + (40 - 25) * ((100vw - 320px)/(1600 - 320)));
         margin: 0 auto 10px 0;
         text-shadow: 1px 1px 1px black;
 
@@ -861,7 +878,7 @@ body::-webkit-scrollbar-thumb:hover {
     .container-footer .flex-item-3 ul.footer-icons li a i {
         text-decoration: none;
         padding-bottom:5px;   
-        font-size: calc(12px + (25 - 12) * ((100vw - 320px)/(1600 - 320)));
+        font-size: calc(15px + (25 - 15) * ((100vw - 320px)/(1600 - 320)));
     }
 
     .container-footer .flex-item-3 ul.footer-icons li a:hover, 
@@ -875,7 +892,7 @@ body::-webkit-scrollbar-thumb:hover {
         border-bottom-style: solid;
         border-bottom-width: 2px;
         padding-bottom:2px;    
-        font-size: calc(8px + (17 - 8) * ((100vw - 320px)/(1600 - 320)));
+        font-size: calc(15px + (25 - 15) * ((100vw - 320px)/(1600 - 320)));
     }
 
     .container-footer .flex-item-3 p a:link, 
@@ -895,8 +912,8 @@ body::-webkit-scrollbar-thumb:hover {
         text-decoration: none;
         border-bottom-style: solid;
         border-bottom-width: 2px;
-        padding-bottom:2px;    
-        font-size: calc(8px + (17 - 8) * ((100vw - 320px)/(1600 - 320)));
+        padding-bottom:2px;   
+        font-size: calc(15px + (17 - 15) * ((100vw - 320px)/(1600 - 320)));
     }
 
     a.privacy-legal:link,
