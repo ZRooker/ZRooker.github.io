@@ -553,7 +553,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .story-item-home{
-        margin: 10% 0 10% 0;
+        margin: 10% 0 5% 0;
     }
 
     .story-container .story-item-1{padding: 2% 8% 2% 8%; }
@@ -606,19 +606,19 @@ body::-webkit-scrollbar-thumb:hover {
         border: 2px solid var(--b);
         /* font-weight: bold; */
         color: var(--text);
-        background-color: var(--secondary);
+        background-color: var(--primary);
         /* text-shadow: 1px 2px 2px black; */
         width: 30%;
         padding: 1%;
-        margin-bottom: 2%;
+        margin-bottom: 10%;
         text-align: center;
         border-radius: 5px;
     }
     .story-container .story-item-home-2 a.btn-cta:hover{
         /* color: var(--lb); */
         /* border: 2px solid var(--lb); */
-        background-color: var(--primary);
-        transition: .5s;
+        background-color: var(--secondary);
+        transition: .3s;
     }
     
 
