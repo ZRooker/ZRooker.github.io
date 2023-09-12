@@ -944,10 +944,22 @@ body::-webkit-scrollbar-thumb:hover {
     /*#endregion */
 
     /* ############### RSVP PAGE ############## */
-    .container-contact-form {
-        background-color: var(--box);
-        margin: 4% 25% 4% 25% ;
-        border: 4px solid var(--border);
+    /* Desktop RSVP  */
+    @media all and (min-width:768px) {
+        .container-contact-form {
+            background-color: var(--box);
+            margin: 4% 20% 4% 20% ;
+            border: 4px solid var(--border);
+        }
+    }
+            
+    /* Mobiles footer - inside padding */
+    @media all and (max-width:767px) {
+        .container-contact-form {
+            background-color: var(--box);
+            margin: 5% 15% 5% 15%;
+            border: 4px solid var(--border);
+        }
     }
 
      .container-contact-form label,
