@@ -771,6 +771,8 @@ body::-webkit-scrollbar-thumb:hover {
         text-align: center;
     }
 
+    .grid-item:hover{ background-color:var(--secondary);}
+
 /* ################ FOOTER CSS (SAME FOR BOTH MOBILE AND DESKTOP ################ */
     /*#region */
     /* Outer footer parent container */
