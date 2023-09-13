@@ -661,6 +661,7 @@ body::-webkit-scrollbar-thumb:hover {
         /* border: 2px solid #fffefe; */
         /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
         background-color:var(--background);
+        padding: 5%;
         /* height: 100%;  */
     }
 
@@ -722,7 +723,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     /* ===================== CONTENT BLOCK ON MOBILE  ========================== */
     /*#region*/
-    @media all and (max-width: 767px) {
+    @media all and (max-width: 1315px) {
         .body-container .body-item-1 h1, .body-container .body-item-3 h1 { text-align: center; margin-top: 5%; padding: 0;}
         .body-container .body-item-1 h2, .body-container .body-item-3 h2{ text-align: center; margin-top: 1%; padding: 0;}
         .body-container .body-item-1 p, .body-container .body-item-3 p{ text-align: center; margin: 4% 5% 5% 5%; padding: 0;}
