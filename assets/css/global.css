@@ -743,7 +743,33 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
 /* ######################## GALLERY BLOCK  ################################3# */
+    .gallery-overview{
+        background-color:var(--background);
+    }
 
+    .gallery-container .gallery-item-1 h1{
+        display: flex;
+        color: var(--primary);
+        justify-content: center;
+        margin: 3% 0 0% 0; 
+        font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: var(--background);
+        padding: 4%;
+        gap: 2% 1%;
+    }
+
+    .grid-item {
+        background-color: var(--footer);
+        border: 2px solid rgba(0, 0, 0, 0.8);
+        padding: 10%;
+        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
+        text-align: center;
+    }
 
 /* ################ FOOTER CSS (SAME FOR BOTH MOBILE AND DESKTOP ################ */
     /*#region */
