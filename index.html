@@ -8,35 +8,29 @@
 	<title>Home | The Rookers</title>
 	<meta name="description" content="Welcome to our wedding site.">
 	
-    <!-- Link to CSS -->
+    <!-- Link to CSS Files -->
 	<link href="assets/css/global.css" rel="stylesheet">
+    <link href="assets/css/home.css" rel="stylesheet">
     
     <!-- Link to JavaScript -->
     <script defer src="assets/js/slideshow_script.js"></script>
+    <script defer src="assets/js/countdown_script.js"></script>
+    <script defer src="assets/js/script.js"></script>
 
-    <!-- Link to Google Fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!-- Link to Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
 	<!-- Link to icons for Font Awesome 5 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
 	<!-- Styles for Cookie Consent Popup Message  -->
 	<link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
-
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-330587160-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-330587160-1');
-	</script>
+	<!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-330587160-1"></script>
 
 </head>
 
-<body class = "bg-pastel-grey">
+<body>
 <!-- ############### MENU ################# -->
     <!-- Begin desktop menu -->
     <div class="container-menu-desktop menu-light menu-sticky">
@@ -100,29 +94,22 @@
     <!-- End mobile menu slide-out options -->
 
 <!-- ############### SLIDESHOW  ################# -->
-<!-- Slideshow container -->
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="slideshow-item fade">
       <div class="numbertext">1 / 3</div>
       <div class = "slideshow-slide-1"></div>
-      <!-- <img src="/assets/img/L1130302b.jpg" > -->
-      <!-- <div class="text">Caption Text</div> -->
     </div>
   
     <div class="slideshow-item fade">
       <div class="numbertext">2 / 3</div>
       <div class = "slideshow-slide-2"></div>
-      <!-- <img src="/assets/img/L1130302b.jpg" > -->
-      <!-- <div class="text">Caption Two</div> -->
     </div>
   
     <div class="slideshow-item fade">
       <div class="numbertext">3 / 3</div>
       <div class = "slideshow-slide-3"></div>
-      <!-- <img src="/assets/img/L1130302b.jpg" > -->
-      <!-- <div class="text">Caption Three</div> -->
     </div>
   
     <!-- Next and previous buttons -->
@@ -138,11 +125,6 @@
     </div>
   </div>
   
-<!-- ############### HOME ################# -->
-   <!-- Begin hero block -->
-    <!-- <div class="home-flexbox container-home-block-one-columns unhide-content-under-sticky-menu">
-    </div> -->
-
 <!-- ############### STORY ################# -->
     <!-- Begin container for contact form -->
     <div class = "story-overview">
@@ -236,175 +218,10 @@
             <a class="privacy-legal" href="privacy.html">Privacy & Legal</a>
      </div>
     </div>
-</body>	
 	<!-- End HTML footer -->
+</body>	
 
+	
 
-	<!-- Begin JavaScript code for desktop and mobile menus -->
-    <script>
-
-        // Code to detect click of option within fly-out menu
-        let specifiedElement = document.querySelector('.flyout-menu');
-        document.addEventListener('click', function(event) {
-            var isClickInside = specifiedElement.contains(event.target);
-            //If link is within current web page
-            if (isClickInside) {
-                //Get id of anchor
-                let anchor_id = window.location.hash;
-                //Add extra spacing above anchor
-                let elemAnchor = document.querySelector(anchor_id)
-                elemAnchor.classList.add('sticky-anchor');
-                //Close fly-out menu
-                toggleMobileMenu(); 
-            }
-            else {
-                return;
-            }
-        });
-
-	    // Code to show/hide fly-out mobile menu -->
-        document.querySelector('.item-icon').addEventListener('click', toggleMobileMenu)
-        const pageContainer = document.querySelector('.page-container');
-   
-        function toggleMobileMenu() {
-            //toggle hamburger icon
-            const elemIcon = document.querySelector('.item-icon');
-            elemIcon.classList.toggle("change");
-            const elemHTML = document.querySelector('html');
-            const elemBody = document.querySelector('body');            
-            const elemFlyOut = document.querySelector('.flyout-menu');
-
-            //if fly-out menu is currently closed, open it.
-            if (elemIcon.classList.contains('change')) {
-                elemFlyOut.classList.remove('flyout-menu-is-closed');
-                elemFlyOut.classList.add('flyout-menu-is-open');
-                elemHTML.classList.add('no-scroll');
-                elemBody.classList.add('no-scroll');
-            }    
-            //if fly-out menu is currently open, close it.
-            else {
-                elemFlyOut.classList.remove('flyout-menu-is-open');
-                elemFlyOut.classList.add('flyout-menu-is-closed');
-                elemHTML.classList.remove('no-scroll');
-                elemBody.classList.remove('no-scroll');                                
-            }
-        }
-
-		// Code for menus with transparent background
-		window.onscroll = function() {swapMenuStyle()};
-		const headerDesktop = document.querySelector('.container-menu-desktop');
-		const headerMobile = document.querySelector('.container-menu-bar-mobile');
-
-		const stickyDesktop = headerDesktop.offsetTop +300;
-		const stickyMobile = headerDesktop.offsetTop  +300;
-
-		function swapMenuStyle() {
-			if (window.pageYOffset > stickyDesktop) {
-				headerDesktop.classList.add("menu-drop-shadow");
-                headerDesktop.classList.add("menu-drop-height");
-			} else {
-				headerDesktop.classList.remove("menu-drop-shadow");
-                headerDesktop.classList.remove("menu-drop-height");
-			}
-		}
-
-	</script>
-	<!-- End JavaScript code for desktop and mobile menus -->
-
-
-    <!-- JavaScript for Cookie Consent Popup Message -->
-	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-	<script>
-	window.cookieconsent.initialise({
-	  	"palette": {
-			"popup": {
-				"background": "#000"
-			},
-			"button": {
-				"background": "#f1d600"
-			}
-		},
-	  	"content": {
-			"href": "https://ZRooker.github.io/privacy.html"
-		}
-	});
-    </script>
-    
-    <!-- Countdown Script -->
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("May 18, 2024 5:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-          // Get today's date and time
-          var now = new Date().getTime();
-        
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-        
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-          // Display the result in the element with id="demo"
-          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-        
-          // If the count down is finished, write some text
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "CONGRATS! TO THE ROOKERS";
-          }
-        }, 1000);
-
-        // Slideshow Script #############
-        // let slideIndex = 1;
-        // showSlides(slideIndex);
-
-        // // Next/previous controls
-        // function plusSlides(n) {
-        // showSlides(slideIndex += n);
-        // }
-
-        // // Thumbnail image controls
-        // function currentSlide(n) {
-        // showSlides(slideIndex = n);
-        // }
-
-        // function showSlides(n) {
-        // let i;
-        // let slides = document.getElementsByClassName("slideshow-item");
-        // let dots = document.getElementsByClassName("dot");
-        // if (n > slides.length) {slideIndex = 1}
-        // if (n < 1) {slideIndex = slides.length}
-        // for (i = 0; i < slides.length; i++) {
-        //     slides[i].style.display = "none";
-        // }
-        // for (i = 0; i < dots.length; i++) {
-        //     dots[i].className = dots[i].className.replace(" active", "");
-        // }
-        // slides[slideIndex-1].style.display = "block";
-        // dots[slideIndex-1].className += " active";
-        // }
-
-        // Automatic SlideShow
-        // let slideIndex = 0;
-        // showSlides();
-
-        // function showSlides() {
-        // let i;
-        // let slides = document.getElementsByClassName("slideshow-item");
-        // for (i = 0; i < slides.length; i++) {
-        //     slides[i].style.display = "none";
-        // }
-        // slideIndex++;
-        // if (slideIndex > slides.length) {slideIndex = 1}
-        // slides[slideIndex-1].style.display = "block";
-        // setTimeout(showSlides, 10000); // Change image every 2 seconds
-        // }
-        </script>
+  
 </html>

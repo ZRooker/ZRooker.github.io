@@ -8,38 +8,33 @@
 	<title> RSVP | The Rookers</title>
 	<meta name="description" content="Welcome to our wedding site.">
 	
+<!-- Link to CSS Files -->
 	<link href="../assets/css/global.css" rel="stylesheet">
+    <link href="../assets/css/rsvp.css" rel="stylesheet">
+    
+    <!-- Link to JavaScript -->
+    <script defer src="../assets/js/script.js"></script>
 
-    <!-- Link to Google Fonts -->
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!-- Link to Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 
 	<!-- Link to icons for Font Awesome 5 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
 	<!-- Styles for Cookie Consent Popup Message  -->
 	<link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-330587160-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-330587160-1');
-	</script>
-
 </head>
 
-
-<body class="bg-pastel-grey">
-
+<body>
+<!-- ############### MENU ################# -->
      <!-- Begin desktop menu -->
     <div class="container-menu-desktop menu-light menu-sticky">
         <!-- first child item -->
         <h1>The Rookers</h1>
-        <!-- <a href="index.html"><img src="../assets/img/website-logo.png" alt="website logo"></a> -->
-        <!-- second child item -->
+                <!-- second child item -->
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../registry/index.html">Registry </a></li>
@@ -54,7 +49,6 @@
     <div class="container-menu-bar-mobile menu-light menu-sticky">
             <!-- first child -->
             <h1>The Rookers</h1>
-            <!-- <a href="../index.html"><img src="../assets/img/website-logo.png" alt="website logo"></a> -->
             <!-- second child -->
             <div class="item-icon">
                 <div class="bar1"></div>
@@ -96,7 +90,7 @@
     <!-- End mobile menu slide-out options -->
 <!-- ############### HERO ################# -->
    <!-- Begin hero block -->
-   <div class="hero-flexbox container-hero-block-one-columns unhide-content-under-sticky-menu">
+   <div class="hero-flexbox unhide-content-under-sticky-menu">
     <!-- <a ><img src="../assets/img/L1130068.jpg" alt="website background"></a> -->
   <div class="hero-item-1 slide-in-left">
       <h1>RSVP</h1>
@@ -189,104 +183,6 @@
             <a class="privacy-legal" href="privacy.html">Privacy & Legal</a>
      </div>
     </div>
-	
-	<!-- End HTML footer -->
-
-
-	<!-- Begin JavaScript code for desktop and mobile menus -->
-    <script>
-
-        // Code to detect click of option within fly-out menu
-        let specifiedElement = document.querySelector('.flyout-menu');
-        document.addEventListener('click', function(event) {
-            var isClickInside = specifiedElement.contains(event.target);
-            //If link is within current web page
-            if (isClickInside) {
-                //Get id of anchor
-                let anchor_id = window.location.hash;
-                //Add extra spacing above anchor
-                let elemAnchor = document.querySelector(anchor_id)
-                elemAnchor.classList.add('sticky-anchor');
-                //Close fly-out menu
-                toggleMobileMenu();
-            }
-            else {
-                return;
-            }
-        });
-
-	    // Code to show/hide fly-out mobile menu -->
-        document.querySelector('.item-icon').addEventListener('click', toggleMobileMenu)
-        const pageContainer = document.querySelector('.page-container');
-   
-        function toggleMobileMenu() {
-            //toggle hamburger icon
-            const elemIcon = document.querySelector('.item-icon');
-            elemIcon.classList.toggle("change");
-            const elemHTML = document.querySelector('html');
-            const elemBody = document.querySelector('body');            
-            const elemFlyOut = document.querySelector('.flyout-menu');
-
-            //if fly-out menu is currently closed, open it.
-            if (elemIcon.classList.contains('change')) {
-                elemFlyOut.classList.remove('flyout-menu-is-closed');
-                elemFlyOut.classList.add('flyout-menu-is-open');
-                elemHTML.classList.add('no-scroll');
-                elemBody.classList.add('no-scroll');
-            }    
-            //if fly-out menu is currently open, close it.
-            else {
-                elemFlyOut.classList.remove('flyout-menu-is-open');
-                elemFlyOut.classList.add('flyout-menu-is-closed');
-                elemHTML.classList.remove('no-scroll');
-                elemBody.classList.remove('no-scroll');                                
-            }
-        }
-
-		// Code for menus with transparent background
-		// window.onscroll = function() {swapMenuStyle()};
-		const headerDesktop = document.querySelector('.container-menu-desktop');
-		const headerMobile = document.querySelector('.container-menu-bar-mobile');
-
-		const stickyDesktop = headerDesktop.offsetTop +300;
-		const stickyMobile = headerDesktop.offsetTop  +300;
-
-		function swapMenuStyle() {
-			if (window.pageYOffset > stickyDesktop) {
-				headerDesktop.classList.add("menu-light","menu-drop-shadow");
-				headerDesktop.classList.remove("menu-transparent");
-				headerMobile.classList.add("menu-light","menu-drop-shadow");
-				headerMobile.classList.remove("menu-transparent");
-
-			} else {
-				headerDesktop.classList.add("menu-transparent");
-				headerDesktop.classList.remove("menu-light","menu-drop-shadow");
-				headerMobile.classList.add("menu-transparent");
-				headerMobile.classList.remove("menu-light","menu-drop-shadow");
-			}
-		}
-
-	</script>
-	<!-- End JavaScript code for desktop and mobile menus -->
-
-
-    <!-- JavaScript for Cookie Consent Popup Message -->
-	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-	<script>
-	window.cookieconsent.initialise({
-	  	"palette": {
-			"popup": {
-				"background": "#000"
-			},
-			"button": {
-				"background": "#f1d600"
-			}
-		},
-	  	"content": {
-			"href": "https://ZRooker.github.io/privacy.html"
-		}
-	});
-    </script>
-    
+		<!-- End HTML footer -->
 </body>
 </html>

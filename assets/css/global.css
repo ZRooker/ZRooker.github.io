@@ -1,4 +1,5 @@
 /* Color Pallet */
+/* #region */
 :root {
     --w: #F8E8EE;
     --white: white; 
@@ -38,7 +39,7 @@
         --bm: #31212d;   
     }
 }
-
+/* #endregion */
 
 /* ##################### OVERALL PROPERTIES ##################### */
 /* #region */
@@ -461,143 +462,28 @@ body::-webkit-scrollbar-thumb:hover {
 /*#endregion */
 /* #endregion */
 
-/* ######################## SLIDESHOW BLOCK  ################################# */
+/* ######################## HERO BLOCK  ################################# */
+/* #region */
+    /* ===================== OVERALL HERO BLOCK  ========================== */ 
+    .hero-flexbox { 
+        /* Flexbox */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
 
-.slideshow-container {
-     position: relative; 
-     height: 50%;
-     margin-top: 100px;
-  }
-
-.slideshow-slide-1,
-.slideshow-slide-2,
-.slideshow-slide-3{
-    background-color: var(--background);
-    /* background-position: center center; */
-    background-repeat: no-repeat, repeat;
-    height: 100%;
-    border: 3px solid rgba(0, 0, 0, 0.75); 
-    background-size: cover;
-
-}
-
-/* Slideshow Photos */
-.slideshow-slide-1{ background-image: url(/assets/img/L1130302b.jpg); background-position: center center;}
-.slideshow-slide-2{ background-image: url(/assets/img/L1130338.jpg); background-position: 50% 30%;}
-.slideshow-slide-3{ background-image: url(/assets/img/L1130068.jpg);background-position: 60% 25%;}
-
-.slideshow-container .slideshow-item{
-    width: 100%;
-    height: 100%;
-    transition: left 0s 0.75s;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 45%;
-    padding: 1% 1%;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-}
-
-/* On hover, add a black background color with some transparency */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.dot-container {
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-flex;
-    bottom: 10%;
-    z-index: 999;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-  
-/* ######################## HOME BLOCK  ################################# */
-/* ONLY FOR THE HOME PAGE */
-    @media all and (min-width: 768px) {
-        .home-flexbox.container-home-block-one-columns { 
-            background-color: var(--background);
-            background-image: url(/assets/img/L1130302b.jpg);
-            background-position: center center;
-            height: 50%;
-            border: 3px solid rgba(0, 0, 0, 0.75); 
-        }    
-    }
-/* ######################## HERO & HOME BLOCK  ################################# */
-    .home-flexbox.container-home-block-one-columns,
-    .hero-flexbox.container-hero-block-one-columns{ 
+        /* Background Image */
         background-repeat: no-repeat, repeat;
         background-size: cover;
         max-width: 100%;
+        background-color: var(--background);
+        background-image: url(/assets/img/L1130068.jpg);
+        background-position: right 25%;
+        height: 100%;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.25);  
     }
 
-    .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1,
-    .home-flexbox.container-home-block-one-columns .hero-item-home h1 {
+    .hero-flexbox .hero-item-1 h1 {
         font-family: 'Tangerine', sans-serif; 
         color: var(--text-accent);
         text-shadow: 1px 2px 2px black;
@@ -607,77 +493,41 @@ body::-webkit-scrollbar-thumb:hover {
 
     /* ===================== DESKTOP HERO & HOME BLOCK  ========================== */
     @media all and (min-width: 768px) {
-        .hero-flexbox.container-hero-block-one-columns,
-        .home-flexbox.container-home-block-one-columns {margin-top: 100px;}
-
-        .hero-flexbox.container-hero-block-one-columns {height: 25%;}
-        .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(60px + (60 - 30) * ((100vw - 320px) / (1600 - 320))); }
+        .hero-flexbox {margin-top: 100px;height: 25%;}
+        .hero-flexbox .hero-item-1 h1 {font-size: calc(60px + (60 - 30) * ((100vw - 320px) / (1600 - 320))); }
     }
     
     /* ===================== HERO & HOME BLOCK ON MOBILE  ========================== */
     @media all and (max-width: 768px) {
-        .hero-flexbox.container-hero-block-one-columns,
-        .home-flexbox.container-home-block-one-columns { margin-top: 80px; }
-
-        .hero-flexbox.container-hero-block-one-columns {height: 15%;}
-        .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 {font-size: calc(50px + (40 - 30) * ((100vw - 320px) / (1600 - 320))); }
+        .hero-flexbox{ margin-top: 80px;height: 15%; }
+        .hero-flexbox .hero-item-1 h1 {font-size: calc(50px + (40 - 30) * ((100vw - 320px) / (1600 - 320))); }
     }
-    /* .home-body-background{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='church-on-sunday' fill='%23f9808a' fill-opacity='0.4'%3E%3Cpath d='M77.17 0H80v2.83l-.1.1A39.9 39.9 0 0 1 74.64 20a39.9 39.9 0 0 1 5.24 17.06l.11.11v2.89c-.01 6.9-1.8 13.79-5.35 19.94A39.96 39.96 0 0 1 80 79.94V80h-2.83L66.84 69.66a39.83 39.83 0 0 1-24.1 10.25l.09.09h-5.66l.1-.1c-8.7-.58-17.22-4-24.1-10.23L2.82 80H0V79.94c.01-6.9 1.8-13.8 5.35-19.94A39.96 39.96 0 0 1 0 40.06V37.17l.1-.1A39.9 39.9 0 0 1 5.36 20 39.9 39.9 0 0 1 .1 2.94L0 2.83V0h2.83l-.1.1a39.83 39.83 0 0 1 24.1 10.24L37.18 0H40c0 6.92-1.78 13.83-5.35 20A39.96 39.96 0 0 1 40 40c0-6.92 1.78-13.83 5.35-20A39.96 39.96 0 0 1 40 0h2.83l10.33 10.34A39.83 39.83 0 0 1 77.26.09L77.17 0zm.77 77.94c-.3-5.52-1.8-11-4.49-16a40.18 40.18 0 0 1-5.17 6.34l9.66 9.66zm-12.52-9.7l-6.83-6.83-5.46 5.46-1.41 1.41-9.66 9.66c8.4-.45 16.69-3.68 23.36-9.7zm-23.07 6.58l7.99-7.98a40.05 40.05 0 0 1-3.79-4.9 37.88 37.88 0 0 0-4.2 12.88zM47.68 60a37.98 37.98 0 0 0 4.07 5.42L57.17 60l-5.42-5.42A38 38 0 0 0 47.68 60zm2.66-6.84a40.06 40.06 0 0 0-3.79 4.9 37.88 37.88 0 0 1-4.2-12.88l7.99 7.98zm1.38-1.44l1.41 1.41 5.46 5.46 6.83-6.84a37.85 37.85 0 0 0-23.36-9.7l9.66 9.67zM60 60l6.87 6.87A38.1 38.1 0 0 0 72.32 60a38.11 38.11 0 0 0-5.45-6.87L60 60zm-14.65 0a39.9 39.9 0 0 0-5.24 17.06l-.11.11-.1-.1A39.9 39.9 0 0 0 34.64 60a39.9 39.9 0 0 0 5.24-17.06l.11-.11.1.1A39.9 39.9 0 0 0 45.36 60zm9.23-48.25a37.85 37.85 0 0 1 23.36-9.7l-9.66 9.67-1.41 1.41-5.46 5.46-6.83-6.84zm13.67 13.67L62.83 20l5.42-5.42A38 38 0 0 1 72.32 20a37.98 37.98 0 0 1-4.07 5.42zm5.2-3.47a40.05 40.05 0 0 1-3.79 4.89l7.99 7.98c-.61-4.45-2.01-8.82-4.2-12.87zm-6.58 4.92l1.41 1.41 9.66 9.66a37.85 37.85 0 0 1-23.36-9.7l6.83-6.83 5.46 5.46zM53.13 13.13L60 20l-6.87 6.87A38.11 38.11 0 0 1 47.68 20a38.1 38.1 0 0 1 5.45-6.87zm-1.41-1.41l-9.66-9.66c.3 5.52 1.8 11 4.49 16a40.18 40.18 0 0 1 5.17-6.34zm-9.66 26.22c.3-5.52 1.8-11 4.49-16a40.18 40.18 0 0 0 5.17 6.34l-9.66 9.66zm26.22 13.78l9.66-9.66c-.3 5.52-1.8 11-4.49 16a40.18 40.18 0 0 0-5.17-6.34zm8.98-11.81L66.84 50.34a39.83 39.83 0 0 0-24.1-10.25l10.42-10.43a39.83 39.83 0 0 0 24.1 10.25zm-7.6-26.75a40.06 40.06 0 0 1 3.79 4.9 37.88 37.88 0 0 0 4.2-12.88l-7.99 7.98zm-31.72 28.9c-8.4.45-16.69 3.68-23.36 9.7l6.83 6.83 5.46-5.46 1.41-1.41 9.66-9.66zM22.83 60l5.42 5.42c1.54-1.7 2.9-3.52 4.07-5.42a38 38 0 0 0-4.07-5.42L22.83 60zm5.45 8.28l-1.41-1.41-5.46-5.46-6.83 6.84a37.85 37.85 0 0 0 23.36 9.7l-9.66-9.67zm9.37 6.54l-7.99-7.98a40.05 40.05 0 0 0 3.79-4.9 37.88 37.88 0 0 1 4.2 12.88zM20 60l-6.87-6.87A38.11 38.11 0 0 0 7.68 60a38.11 38.11 0 0 0 5.45 6.87L20 60zm17.26-19.9L26.84 29.65a39.83 39.83 0 0 1-24.1 10.25l10.42 10.43a39.83 39.83 0 0 1 24.1-10.25zm-35.2 1.96l9.66 9.66a40.18 40.18 0 0 0-5.17 6.33c-2.7-5-4.2-10.47-4.5-16zm4.49 19.89c-2.7 5-4.2 10.47-4.5 16l9.67-9.67a40.18 40.18 0 0 1-5.17-6.33zm31.1-16.77c-.61 4.45-2.01 8.82-4.2 12.87a40.06 40.06 0 0 0-3.79-4.89l7.99-7.98zm-4.2-23.23c2.7 5 4.2 10.47 4.5 16l-9.67-9.67c1.97-1.97 3.7-4.1 5.17-6.33zm-14.86-.54l6.83 6.84a37.85 37.85 0 0 1-23.36 9.7l9.66-9.67 1.41-1.41 5.46-5.46zm-8.25 5.43l-7.99 7.98c.61-4.45 2.01-8.82 4.2-12.87a40.04 40.04 0 0 0 3.79 4.89zm1.41-1.42A37.99 37.99 0 0 1 7.68 20a38 38 0 0 1 4.07-5.42L17.17 20l-5.42 5.42zm-5.2-7.37a40.04 40.04 0 0 1 3.79-4.89L2.35 5.18c.61 4.45 2.01 8.82 4.2 12.87zm6.58-4.92l-1.41-1.41-9.66-9.66a37.85 37.85 0 0 1 23.36 9.7l-6.83 6.83-5.46-5.46zm13.74 13.74L20 20l6.87-6.87A38.1 38.1 0 0 1 32.32 20a38.1 38.1 0 0 1-5.45 6.87zm6.58-8.82a40.18 40.18 0 0 0-5.17-6.33l9.66-9.66c-.3 5.52-1.8 11-4.49 16z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");} */
+     /* #endregion */
+ 
+/* ######################## STORY BLOCK  ################################# */
+/* #region */
+    /* Note: Story Block has this setup to accomodate the HOME page css too.
+             That can be found in home.css */
     
-
-/* ######################## HERO BLOCK  ################################# */
-    /* ===================== OVERALL HERO BLOCK  ========================== */
-    /*#region*/
-    @media all and (max-width:767px){
-        .hero-flexbox.container-home-block-one-columns { 
-            background-color: var(--background);
-            background-image: url(/assets/img/L1130068.jpg);
-            background-position: right 25%;
-            height: 100%;
-            border-bottom: 3px solid rgba(0, 0, 0, 0.25);  
-        }
-    }
-    
-        .hero-flexbox.container-hero-block-one-columns .hero-item-1 h1 { margin-top: 10% }
-
-/* ============== FLEXBOX MULTI-COLUMN LAYOUTS ================== */
-
-/* ============ PARENT FLEXBOX CONTAINERS ========== */
-    /*#region */
-    .hero-flexbox { 
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-/* ######################## STORY BLOCK  ################################3# */
-    /* Note story-item-home is for home page. story-item-1 is global */
-
-    /* Proper Spacing for Very Large Websites Story */
+    /* Proper Spacing for Very Large Websites Story and Medium Size */
     @media all and (min-width:1500px) {.story-container { margin: 5% 50% 5% 50%; }}
-
-    /* Mid Size screen */
     @media all and (min-width:800px) {.story-container { margin: 5% 15% 5% 15%; }}
 
-    .story-overview{padding: 2% 0  2% 0; border-bottom: 2px solid var(--border);background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='church-on-sunday' fill='%23f9808a' fill-opacity='0.4'%3E%3Cpath d='M77.17 0H80v2.83l-.1.1A39.9 39.9 0 0 1 74.64 20a39.9 39.9 0 0 1 5.24 17.06l.11.11v2.89c-.01 6.9-1.8 13.79-5.35 19.94A39.96 39.96 0 0 1 80 79.94V80h-2.83L66.84 69.66a39.83 39.83 0 0 1-24.1 10.25l.09.09h-5.66l.1-.1c-8.7-.58-17.22-4-24.1-10.23L2.82 80H0V79.94c.01-6.9 1.8-13.8 5.35-19.94A39.96 39.96 0 0 1 0 40.06V37.17l.1-.1A39.9 39.9 0 0 1 5.36 20 39.9 39.9 0 0 1 .1 2.94L0 2.83V0h2.83l-.1.1a39.83 39.83 0 0 1 24.1 10.24L37.18 0H40c0 6.92-1.78 13.83-5.35 20A39.96 39.96 0 0 1 40 40c0-6.92 1.78-13.83 5.35-20A39.96 39.96 0 0 1 40 0h2.83l10.33 10.34A39.83 39.83 0 0 1 77.26.09L77.17 0zm.77 77.94c-.3-5.52-1.8-11-4.49-16a40.18 40.18 0 0 1-5.17 6.34l9.66 9.66zm-12.52-9.7l-6.83-6.83-5.46 5.46-1.41 1.41-9.66 9.66c8.4-.45 16.69-3.68 23.36-9.7zm-23.07 6.58l7.99-7.98a40.05 40.05 0 0 1-3.79-4.9 37.88 37.88 0 0 0-4.2 12.88zM47.68 60a37.98 37.98 0 0 0 4.07 5.42L57.17 60l-5.42-5.42A38 38 0 0 0 47.68 60zm2.66-6.84a40.06 40.06 0 0 0-3.79 4.9 37.88 37.88 0 0 1-4.2-12.88l7.99 7.98zm1.38-1.44l1.41 1.41 5.46 5.46 6.83-6.84a37.85 37.85 0 0 0-23.36-9.7l9.66 9.67zM60 60l6.87 6.87A38.1 38.1 0 0 0 72.32 60a38.11 38.11 0 0 0-5.45-6.87L60 60zm-14.65 0a39.9 39.9 0 0 0-5.24 17.06l-.11.11-.1-.1A39.9 39.9 0 0 0 34.64 60a39.9 39.9 0 0 0 5.24-17.06l.11-.11.1.1A39.9 39.9 0 0 0 45.36 60zm9.23-48.25a37.85 37.85 0 0 1 23.36-9.7l-9.66 9.67-1.41 1.41-5.46 5.46-6.83-6.84zm13.67 13.67L62.83 20l5.42-5.42A38 38 0 0 1 72.32 20a37.98 37.98 0 0 1-4.07 5.42zm5.2-3.47a40.05 40.05 0 0 1-3.79 4.89l7.99 7.98c-.61-4.45-2.01-8.82-4.2-12.87zm-6.58 4.92l1.41 1.41 9.66 9.66a37.85 37.85 0 0 1-23.36-9.7l6.83-6.83 5.46 5.46zM53.13 13.13L60 20l-6.87 6.87A38.11 38.11 0 0 1 47.68 20a38.1 38.1 0 0 1 5.45-6.87zm-1.41-1.41l-9.66-9.66c.3 5.52 1.8 11 4.49 16a40.18 40.18 0 0 1 5.17-6.34zm-9.66 26.22c.3-5.52 1.8-11 4.49-16a40.18 40.18 0 0 0 5.17 6.34l-9.66 9.66zm26.22 13.78l9.66-9.66c-.3 5.52-1.8 11-4.49 16a40.18 40.18 0 0 0-5.17-6.34zm8.98-11.81L66.84 50.34a39.83 39.83 0 0 0-24.1-10.25l10.42-10.43a39.83 39.83 0 0 0 24.1 10.25zm-7.6-26.75a40.06 40.06 0 0 1 3.79 4.9 37.88 37.88 0 0 0 4.2-12.88l-7.99 7.98zm-31.72 28.9c-8.4.45-16.69 3.68-23.36 9.7l6.83 6.83 5.46-5.46 1.41-1.41 9.66-9.66zM22.83 60l5.42 5.42c1.54-1.7 2.9-3.52 4.07-5.42a38 38 0 0 0-4.07-5.42L22.83 60zm5.45 8.28l-1.41-1.41-5.46-5.46-6.83 6.84a37.85 37.85 0 0 0 23.36 9.7l-9.66-9.67zm9.37 6.54l-7.99-7.98a40.05 40.05 0 0 0 3.79-4.9 37.88 37.88 0 0 1 4.2 12.88zM20 60l-6.87-6.87A38.11 38.11 0 0 0 7.68 60a38.11 38.11 0 0 0 5.45 6.87L20 60zm17.26-19.9L26.84 29.65a39.83 39.83 0 0 1-24.1 10.25l10.42 10.43a39.83 39.83 0 0 1 24.1-10.25zm-35.2 1.96l9.66 9.66a40.18 40.18 0 0 0-5.17 6.33c-2.7-5-4.2-10.47-4.5-16zm4.49 19.89c-2.7 5-4.2 10.47-4.5 16l9.67-9.67a40.18 40.18 0 0 1-5.17-6.33zm31.1-16.77c-.61 4.45-2.01 8.82-4.2 12.87a40.06 40.06 0 0 0-3.79-4.89l7.99-7.98zm-4.2-23.23c2.7 5 4.2 10.47 4.5 16l-9.67-9.67c1.97-1.97 3.7-4.1 5.17-6.33zm-14.86-.54l6.83 6.84a37.85 37.85 0 0 1-23.36 9.7l9.66-9.67 1.41-1.41 5.46-5.46zm-8.25 5.43l-7.99 7.98c.61-4.45 2.01-8.82 4.2-12.87a40.04 40.04 0 0 0 3.79 4.89zm1.41-1.42A37.99 37.99 0 0 1 7.68 20a38 38 0 0 1 4.07-5.42L17.17 20l-5.42 5.42zm-5.2-7.37a40.04 40.04 0 0 1 3.79-4.89L2.35 5.18c.61 4.45 2.01 8.82 4.2 12.87zm6.58-4.92l-1.41-1.41-9.66-9.66a37.85 37.85 0 0 1 23.36 9.7l-6.83 6.83-5.46-5.46zm13.74 13.74L20 20l6.87-6.87A38.1 38.1 0 0 1 32.32 20a38.1 38.1 0 0 1-5.45 6.87zm6.58-8.82a40.18 40.18 0 0 0-5.17-6.33l9.66-9.66c-.3 5.52-1.8 11-4.49 16z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+    .story-overview{
+        padding: 2% 0  2% 0; 
+        border-bottom: 2px solid var(--border);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='church-on-sunday' fill='%23f9808a' fill-opacity='0.4'%3E%3Cpath d='M77.17 0H80v2.83l-.1.1A39.9 39.9 0 0 1 74.64 20a39.9 39.9 0 0 1 5.24 17.06l.11.11v2.89c-.01 6.9-1.8 13.79-5.35 19.94A39.96 39.96 0 0 1 80 79.94V80h-2.83L66.84 69.66a39.83 39.83 0 0 1-24.1 10.25l.09.09h-5.66l.1-.1c-8.7-.58-17.22-4-24.1-10.23L2.82 80H0V79.94c.01-6.9 1.8-13.8 5.35-19.94A39.96 39.96 0 0 1 0 40.06V37.17l.1-.1A39.9 39.9 0 0 1 5.36 20 39.9 39.9 0 0 1 .1 2.94L0 2.83V0h2.83l-.1.1a39.83 39.83 0 0 1 24.1 10.24L37.18 0H40c0 6.92-1.78 13.83-5.35 20A39.96 39.96 0 0 1 40 40c0-6.92 1.78-13.83 5.35-20A39.96 39.96 0 0 1 40 0h2.83l10.33 10.34A39.83 39.83 0 0 1 77.26.09L77.17 0zm.77 77.94c-.3-5.52-1.8-11-4.49-16a40.18 40.18 0 0 1-5.17 6.34l9.66 9.66zm-12.52-9.7l-6.83-6.83-5.46 5.46-1.41 1.41-9.66 9.66c8.4-.45 16.69-3.68 23.36-9.7zm-23.07 6.58l7.99-7.98a40.05 40.05 0 0 1-3.79-4.9 37.88 37.88 0 0 0-4.2 12.88zM47.68 60a37.98 37.98 0 0 0 4.07 5.42L57.17 60l-5.42-5.42A38 38 0 0 0 47.68 60zm2.66-6.84a40.06 40.06 0 0 0-3.79 4.9 37.88 37.88 0 0 1-4.2-12.88l7.99 7.98zm1.38-1.44l1.41 1.41 5.46 5.46 6.83-6.84a37.85 37.85 0 0 0-23.36-9.7l9.66 9.67zM60 60l6.87 6.87A38.1 38.1 0 0 0 72.32 60a38.11 38.11 0 0 0-5.45-6.87L60 60zm-14.65 0a39.9 39.9 0 0 0-5.24 17.06l-.11.11-.1-.1A39.9 39.9 0 0 0 34.64 60a39.9 39.9 0 0 0 5.24-17.06l.11-.11.1.1A39.9 39.9 0 0 0 45.36 60zm9.23-48.25a37.85 37.85 0 0 1 23.36-9.7l-9.66 9.67-1.41 1.41-5.46 5.46-6.83-6.84zm13.67 13.67L62.83 20l5.42-5.42A38 38 0 0 1 72.32 20a37.98 37.98 0 0 1-4.07 5.42zm5.2-3.47a40.05 40.05 0 0 1-3.79 4.89l7.99 7.98c-.61-4.45-2.01-8.82-4.2-12.87zm-6.58 4.92l1.41 1.41 9.66 9.66a37.85 37.85 0 0 1-23.36-9.7l6.83-6.83 5.46 5.46zM53.13 13.13L60 20l-6.87 6.87A38.11 38.11 0 0 1 47.68 20a38.1 38.1 0 0 1 5.45-6.87zm-1.41-1.41l-9.66-9.66c.3 5.52 1.8 11 4.49 16a40.18 40.18 0 0 1 5.17-6.34zm-9.66 26.22c.3-5.52 1.8-11 4.49-16a40.18 40.18 0 0 0 5.17 6.34l-9.66 9.66zm26.22 13.78l9.66-9.66c-.3 5.52-1.8 11-4.49 16a40.18 40.18 0 0 0-5.17-6.34zm8.98-11.81L66.84 50.34a39.83 39.83 0 0 0-24.1-10.25l10.42-10.43a39.83 39.83 0 0 0 24.1 10.25zm-7.6-26.75a40.06 40.06 0 0 1 3.79 4.9 37.88 37.88 0 0 0 4.2-12.88l-7.99 7.98zm-31.72 28.9c-8.4.45-16.69 3.68-23.36 9.7l6.83 6.83 5.46-5.46 1.41-1.41 9.66-9.66zM22.83 60l5.42 5.42c1.54-1.7 2.9-3.52 4.07-5.42a38 38 0 0 0-4.07-5.42L22.83 60zm5.45 8.28l-1.41-1.41-5.46-5.46-6.83 6.84a37.85 37.85 0 0 0 23.36 9.7l-9.66-9.67zm9.37 6.54l-7.99-7.98a40.05 40.05 0 0 0 3.79-4.9 37.88 37.88 0 0 1 4.2 12.88zM20 60l-6.87-6.87A38.11 38.11 0 0 0 7.68 60a38.11 38.11 0 0 0 5.45 6.87L20 60zm17.26-19.9L26.84 29.65a39.83 39.83 0 0 1-24.1 10.25l10.42 10.43a39.83 39.83 0 0 1 24.1-10.25zm-35.2 1.96l9.66 9.66a40.18 40.18 0 0 0-5.17 6.33c-2.7-5-4.2-10.47-4.5-16zm4.49 19.89c-2.7 5-4.2 10.47-4.5 16l9.67-9.67a40.18 40.18 0 0 1-5.17-6.33zm31.1-16.77c-.61 4.45-2.01 8.82-4.2 12.87a40.06 40.06 0 0 0-3.79-4.89l7.99-7.98zm-4.2-23.23c2.7 5 4.2 10.47 4.5 16l-9.67-9.67c1.97-1.97 3.7-4.1 5.17-6.33zm-14.86-.54l6.83 6.84a37.85 37.85 0 0 1-23.36 9.7l9.66-9.67 1.41-1.41 5.46-5.46zm-8.25 5.43l-7.99 7.98c.61-4.45 2.01-8.82 4.2-12.87a40.04 40.04 0 0 0 3.79 4.89zm1.41-1.42A37.99 37.99 0 0 1 7.68 20a38 38 0 0 1 4.07-5.42L17.17 20l-5.42 5.42zm-5.2-7.37a40.04 40.04 0 0 1 3.79-4.89L2.35 5.18c.61 4.45 2.01 8.82 4.2 12.87zm6.58-4.92l-1.41-1.41-9.66-9.66a37.85 37.85 0 0 1 23.36 9.7l-6.83 6.83-5.46-5.46zm13.74 13.74L20 20l6.87-6.87A38.1 38.1 0 0 1 32.32 20a38.1 38.1 0 0 1-5.45 6.87zm6.58-8.82a40.18 40.18 0 0 0-5.17-6.33l9.66-9.66c-.3 5.52-1.8 11-4.49 16z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
     
     .story-container{
         display: flex;
         justify-content: center; 
         align-content: center;
         flex-direction: column;
-        /* background-color: var(--background); */
         background-color: var(--box);
         border: 2px solid var(--border);
         flex-grow: 0;
-        /* padding: 2% 8% 2% 8%; */
-        /* border-block-color: var(--b); */
     }
-
-    .story-item-home{
-        margin: 10% 0 5% 0;
-    }
-
     .story-container .story-item-1{padding: 2% 8% 2% 8%; }
 
     .story-container h1{
@@ -687,8 +537,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .story-container .story-item-1 h1{margin-top: 2%; font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
-    .story-container .story-item-home h1{font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
-
+    
     .story-container h2{
         color: var(--text); 
         font-weight: bold; 
@@ -696,79 +545,27 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .story-container .story-item-1 h2{font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); }
-    .story-container .story-item-home h2{font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); }
 
     .story-container .story-item-1 p,
-    .story-container .story-item-1 h3,
-    .story-container .story-item-home h3, 
-    .story-container .story-item-home a.btn-cta, 
-    .story-container .story-item-home p#demo{
+    .story-container .story-item-1 h3{
         color: var(--text);
-        /* padding:3% 0 3% 0;  */
         font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
     .story-container .story-item-1 p,
     .story-container .story-item-1 h3{padding:3% 0 3% 0; }
 
-    .story-container .story-item-home h3,
-    p#demo{ text-align: center; }
-
-    /* Calling the countdown clock */
-    p#demo{
-        margin: 2%;
-        padding: 0;
-    }
-
-    /* Nesting a FlexBox */
-    .story-item-home-2,
-    .story-item-home a.btn-cta{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .story-item-home a.btn-cta{ text-decoration-line: none;}
-
-    .story-container .story-item-home a.btn-cta:hover{ 
-        color: var(--secondary);
-        transition: .3s;
-    }
-
-    .story-container .story-item-home-2 a.btn-cta{
-        border: 2px solid var(--b);
-        /* font-weight: bold; */
-        color: var(--text);
-        background-color: var(--primary);
-        /* text-shadow: 1px 2px 2px black; */
-        width: 30%;
-        padding: 1%;
-        margin-bottom: 10%;
-        text-align: center;
-        border-radius: 5px;
-    }
-
-
-    .story-container .story-item-home-2 a.btn-cta:hover{
-        /* color: var(--lb); */
-        /* border: 2px solid var(--lb); */
-        background-color: var(--secondary);
-        transition: .3s;
-    }
-    
-
     /* ===================== STORY BLOCK ON MOBILE  ========================== */
-    /*#region*/
     @media all and (max-width: 767px) {
         .story-container { margin: 5% 10% 3% 10%; }
         .story-container .story-item-1 p{ text-align: center;}
     }
+    /* #endregion */
 
 /* ######################## CONTENT BLOCK  ################################3# */
-    /* Proper Spacing for Very Large Websites Story */
+/* #region */
+    /* Proper Spacing for Very Large Websites Body and Medium */
     @media all and (min-width:1500px) {.body-container { margin: 5% 50% 5% 50%; }}
-
-    /* Mid Size screen */
     @media all and (min-width:800px) {.body-container { margin: 5% 15% 5% 15%; }}
 
     .body-container{
@@ -777,17 +574,12 @@ body::-webkit-scrollbar-thumb:hover {
         justify-content: space-evenly;
         align-content: space-around;
         flex-wrap: wrap;
-        /* align-items: flex-end; */
-        /* border: 2px solid #fffefe; */
-        /* background-color:rgba(0, 0, 0, 0.97);   Bottom Color */
         background-color:var(--background);
         padding: 5%;
-        /* height: 100%;  */
     }
 
     .body-container .body-item-1,
     .body-container .body-item-3 {
-        /* background-color: red; */
         width: 40%;
         height: 40%;
         flex-basis: auto;
@@ -796,7 +588,6 @@ body::-webkit-scrollbar-thumb:hover {
     
     .body-container .body-item-1 h1,
     .body-container .body-item-3 h1{
-        /* color: green; */
         text-align: left;
         font-size: calc(30px + (30 - 15) * ((100vw - 320px) / (1600 - 320))); 
         text-shadow: 1px 1px 1px black;
@@ -808,7 +599,6 @@ body::-webkit-scrollbar-thumb:hover {
     .body-container .body-item-1 h2,
     .body-container .body-item-3 h2{
         padding-top: 2%;
-        /* padding-left: 5%; */
         color: var(--text);
         text-align: left; 
         font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
@@ -819,12 +609,10 @@ body::-webkit-scrollbar-thumb:hover {
         padding: 2% 12% 2% 0%; 
         color: var(--text);
         margin-bottom: 20%;
-        /* flex-shrink: 3; */
         font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
     .body-item-2, .body-item-4 {
-        /* background-color: blue; */
         margin-bottom: 5%;
         flex-grow: 1;
     }
@@ -836,13 +624,11 @@ body::-webkit-scrollbar-thumb:hover {
         margin-left: auto;
         max-width: 50%;
         height: auto;
-        /* border-radius: 2%; */
         border: 3px solid var(--border);
         /* opacity: 75%; */
     }
 
     /* ===================== CONTENT BLOCK ON MOBILE  ========================== */
-    /*#region*/
     @media all and (max-width: 1315px) {
         .body-container .body-item-1 h1, .body-container .body-item-3 h1 { text-align: center; margin-top: 5%; padding: 0;}
         .body-container .body-item-1 h2, .body-container .body-item-3 h2{ text-align: center; margin-top: 1%; padding: 0;}
@@ -861,37 +647,7 @@ body::-webkit-scrollbar-thumb:hover {
         .body-container .body-item-4 { order: 1;}
         
     }
-
-/* ######################## GALLERY BLOCK  ################################3# */
-    .gallery-overview{
-        background-color:var(--background);
-    }
-
-    .gallery-container .gallery-item-1 h1{
-        display: flex;
-        color: var(--primary);
-        justify-content: center;
-        margin: 3% 0 0% 0; 
-        font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: var(--background);
-        padding: 4%;
-        gap: 2% 1%;
-    }
-
-    .grid-item {
-        background-color: var(--footer);
-        border: 2px solid rgba(0, 0, 0, 0.8);
-        padding: 10%;
-        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
-        text-align: center;
-    }
-
-    .grid-item:hover{ background-color:var(--secondary);}
+/* #endregion */
 
 /* ################ FOOTER CSS (SAME FOR BOTH MOBILE AND DESKTOP ################ */
     /*#region */
@@ -1093,121 +849,4 @@ body::-webkit-scrollbar-thumb:hover {
     }
     /* == End footer CSS == */
     /*#endregion */
-
-    /* ############### RSVP PAGE ############## */
-    /* Desktop RSVP  */
-    @media all and (min-width:768px) {
-        .container-contact-form {
-            background-color: var(--box);
-            margin: 4% 20% 4% 20% ;
-            border: 4px solid var(--border);
-        }
-    }
-            
-    /* Mobiles footer - inside padding */
-    @media all and (max-width:767px) {
-        .container-contact-form {
-            background-color: var(--box);
-            margin: 5% 15% 5% 15%;
-            border: 4px solid var(--border);
-        }
-    }
-
-     .container-contact-form label,
-     .container-contact-form input,
-     .container-contact-form select,
-     .container-contact-form textarea{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    label {
-        /* font-weight: bold;  */
-        padding: 2%;
-        color: var(--text);
-        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
-    }
-
-
-    /* Editing the Form */
-    input[type="text"], select {
-        width: 50%; /* Make fields expand to full width */
-        padding: 1.2%; 
-        font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));
-        /* border: 1px solid #ccc;  */
-        /* border-radius: 5px;  */
-        margin: auto auto; 
-        background-color: var(--w);
-        border: 1px solid var(--b);
-        font-family: 'Garamond', serif;
-        /* color: rgb(124, 124, 124); */
-    }
-
-    input[type="text"]:hover, select:hover,
-    input[type="text"]:active, select:active{
-        /* border: 2px solid var(--b); */
-        opacity: 70%;
-    }
-
-    /* Style the submit button */
-    input[type="submit"] {
-        background-color: var(--primary);
-        color: var(--text);
-        padding: 2%;
-        border: 2px solid var(--border);
-        cursor: pointer;
-        font-weight: bold;
-        margin: 2% auto 5% auto; 
-        width: 50%;
-        height: 10%;
-        border: 2px solid var(--text);
-        font-family: 'Tangerine', serif;
-        font-weight: 1000;
-        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
-        border-radius: 10px;
-        
-    }
-    input[type="submit"]:hover {
-        background-color: var(--secondary);
-        transition: .5s;
-    }
-
-    .container-contact-form .contract-item-1 h1{
-        display: flex;
-        justify-content: center;
-        padding: 5%;
-    }
-
-    .container-contact-form .contract-item-2,
-    .container-contact-form .contract-item-3,
-    .container-contact-form .contract-item-3{
-        padding: 2% 0% 1% 0%;  
-    }
-
-    .container-contact-form .contract-item-5{
-        padding: 1% 0% 3% 0%;  
-    }
-
-    #fs-frm-inputs{
-        border: none; 
-    }
-
-    textarea#message{
-        background-color: var(--w);
-        /* display: block; */
-        margin: auto auto;
-        resize: none;
-        overflow-y: scroll;
-        width: 50%;
-        height: 100%;
-        padding: 1.2%;
-        font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));
-        font-family: 'Garamond', serif;
-    }
-
-    textarea#message:active,
-    textarea#message:hover{
-        opacity: 80%;
-    }
 

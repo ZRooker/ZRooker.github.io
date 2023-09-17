@@ -1,0 +1,116 @@
+/* ############### RSVP PAGE ############## */
+    /* Desktop RSVP  */
+    @media all and (min-width:768px) {
+        .container-contact-form {
+            background-color: var(--box);
+            margin: 4% 20% 4% 20% ;
+            border: 4px solid var(--border);
+        }
+    }
+            
+    /* Mobiles footer - inside padding */
+    @media all and (max-width:767px) {
+        .container-contact-form {
+            background-color: var(--box);
+            margin: 5% 15% 5% 15%;
+            border: 4px solid var(--border);
+        }
+    }
+
+     .container-contact-form label,
+     .container-contact-form input,
+     .container-contact-form select,
+     .container-contact-form textarea{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    label {
+        /* font-weight: bold;  */
+        padding: 2%;
+        color: var(--text);
+        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
+    }
+
+
+    /* Editing the Form */
+    input[type="text"], select {
+        width: 50%; /* Make fields expand to full width */
+        padding: 1.2%; 
+        font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));
+        /* border: 1px solid #ccc;  */
+        /* border-radius: 5px;  */
+        margin: auto auto; 
+        background-color: var(--w);
+        border: 1px solid var(--b);
+        font-family: 'Garamond', serif;
+        /* color: rgb(124, 124, 124); */
+    }
+
+    input[type="text"]:hover, select:hover,
+    input[type="text"]:active, select:active{
+        /* border: 2px solid var(--b); */
+        opacity: 70%;
+    }
+
+    /* Style the submit button */
+    input[type="submit"] {
+        background-color: var(--primary);
+        color: var(--text);
+        padding: 2%;
+        border: 2px solid var(--border);
+        cursor: pointer;
+        font-weight: bold;
+        margin: 2% auto 5% auto; 
+        width: 50%;
+        height: 10%;
+        border: 2px solid var(--text);
+        font-family: 'Tangerine', serif;
+        font-weight: 1000;
+        font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
+        border-radius: 10px;
+        
+    }
+    input[type="submit"]:hover {
+        background-color: var(--secondary);
+        transition: .5s;
+    }
+
+    .container-contact-form .contract-item-1 h1{
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+    }
+
+    .container-contact-form .contract-item-2,
+    .container-contact-form .contract-item-3,
+    .container-contact-form .contract-item-3{
+        padding: 2% 0% 1% 0%;  
+    }
+
+    .container-contact-form .contract-item-5{
+        padding: 1% 0% 3% 0%;  
+    }
+
+    #fs-frm-inputs{
+        border: none; 
+    }
+
+    textarea#message{
+        background-color: var(--w);
+        /* display: block; */
+        margin: auto auto;
+        resize: none;
+        overflow-y: scroll;
+        width: 50%;
+        height: 100%;
+        padding: 1.2%;
+        font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));
+        font-family: 'Garamond', serif;
+    }
+
+    textarea#message:active,
+    textarea#message:hover{
+        opacity: 80%;
+    }
