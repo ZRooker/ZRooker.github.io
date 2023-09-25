@@ -555,6 +555,35 @@ body::-webkit-scrollbar-thumb:hover {
     .story-container .story-item-1 p,
     .story-container .story-item-1 h3{padding:3% 0 3% 0; }
 
+    .story-container .story-item-1 p{
+        line-height: 1.6;
+        text-indent: 5%;
+    }
+
+    /* CODE FOR STORY BECAUSE i BROKE IT BECAUSE I AM DUMB DONT DO THIS */
+
+    /* VERY BAD CODING STANDARDS DONT DO THIS  */
+
+    .story-container .story-sub-item-1,
+    .story-container .story-sub-item,
+    .story-container .story-sub-item-last{
+        border: 2px solid var(--secondary);
+        border-left: none;
+        border-right: none;
+        text-indent: 5%;
+    }
+    .story-container .story-sub-item-1{margin-top: 5%;}
+    .story-container .story-sub-item{border-top:none;}
+    .story-container .story-sub-item-last{border-top:none; margin-bottom: 10%;}
+
+    .story-container .story-sub-item-1 h3,
+    .story-container .story-sub-item h3,
+    .story-container .story-sub-item-last h3{ color: var(--text); font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); }
+    .story-container a{text-decoration:none;}
+
+    .story-container h3:hover{color: var(--secondary)}
+
+
     /* ===================== STORY BLOCK ON MOBILE  ========================== */
     @media all and (max-width: 767px) {
         .story-container { margin: 5% 10% 3% 10%; }
@@ -850,3 +879,27 @@ body::-webkit-scrollbar-thumb:hover {
     /* == End footer CSS == */
     /*#endregion */
 
+/* CODE FOR STORY BLOCK PAGE */
+    /* CODE FOR COLLAPSABLE UNITS */
+    .collapsible {
+        cursor: pointer;
+    }
+
+    .content {
+        display: none;
+    }
+
+    
+
+      .story-item-1 .collapsible-header:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: calc(15px + (17 - 15) * ((100vw - 320px)/(1600 - 320)));
+        color: var(--text);
+        float: right;
+        /* margin-left: 5px; */
+      }
+      
+      .story-item-1 .collapsible.active .collapsible-header:after {
+        content: "\02796"; /* Unicode character for "minus" sign (-) */
+      }
+    

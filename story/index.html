@@ -102,24 +102,45 @@
 <!-- ############### STORY ################# -->
     <div class = "story-overview">
         <div class="story-container"> 
-            <div class = "story-item-1 slide-in-left">
-                <h1> The Beginning </h1>
+            <div class = "story-item-1">
+                <h1> Our Story</h1>
                 <h2> January 24th 2021 - Today </h2>
-                <p>A few minor adjustments, as discussed above, 
-                    can help you make a big impact on your CSS code file. 
-                    So, try your hand at these simple ways to improve your CSS skills 
-                    so that you can write cleaner and better CSS code.
-                    A few minor adjustments, as discussed above, 
-                    can help you make a big impact on your CSS code file. 
-                    So, try your hand at these simple ways to improve your CSS skills 
-                    so that you can write cleaner and better CSS code.</p> 
+                <div class = "story-sub-item-1 collapsible">
+                    <h3 class="collapsible-header">The Beginning</h3>
+                    <!-- <h4> January 24th 2021 - Today </h4> -->
+                <div class="content">
+                    <p>A few minor adjustments, as discussed above, 
+                        can help you make a big impact on your CSS code file. 
+                        So, try your hand at these simple ways to improve your CSS skills 
+                        so that you can write cleaner and better CSS code. A few minor adjustments, as discussed above, 
+                        can help you make a big impact on your CSS code file. 
+                        So, try your hand at these simple ways to improve your CSS skills 
+                        so that you can write cleaner and better CSS code.</p>
+                </div>
+                </div>
+       <!-- </div> -->
+            <div class = "story-sub-item collapsible">
+                <h3 class="collapsible-header"> The Engagement </h3>
+                <!-- <h2> January 24th 2021 - Today </h2> -->
+                <div class="content">
+                    <p>A few minor adjustments, as discussed above, 
+                        can help you make a big impact on your CSS code file. 
+                        So, try your hand at these simple ways to improve your CSS skills 
+                        so that you can write cleaner and better CSS code. A few minor adjustments, as discussed above, 
+                        can help you make a big impact on your CSS code file. 
+                        So, try your hand at these simple ways to improve your CSS skills 
+                        so that you can write cleaner and better CSS code.</p>
+                </div>
+            </div>
+            <div class = "story-sub-item-last"> 
+                <a href="#scroll-body"><h3 class="collapsible-header"> The Happy Couple </h3></a>
             </div>
         </div>
     </div>
-
+</div>
 <!-- ############### BODY ################# -->
     <div class = "body-overview"></div>    
-        <div class="body-container"> 
+        <div class="body-container" id = "scroll-body"> 
             <div class = "body-item-1 slide-in-left">
                 <h1>Meet The Bride </h1>
                 <h2>XXXX XXXX </h2>
@@ -187,5 +208,26 @@
      </div>
     </div>
 	<!-- End HTML footer -->
+
+    <!-- Script for Expanding Section -->
+    <script>
+        // Get all elements with the class "collapsible"
+        var coll = document.getElementsByClassName("collapsible");
+
+        // Add a click event listener to each collapsible element
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.querySelector(".content");
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+   
 </body>
 </html>
