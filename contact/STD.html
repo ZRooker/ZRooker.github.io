@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title> RSVP | The Rookers</title>
+	<meta name="description" content="Welcome to our wedding site.">
+	
+<!-- Link to CSS Files -->
+	<link href="../assets/css/global.css" rel="stylesheet">
+    <link href="../assets/css/rsvp.css" rel="stylesheet">
+    
+    <!-- Link to JavaScript -->
+    <script defer src="../assets/js/script.js"></script>
+
+    <!-- Link to Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+	<!-- Link to icons for Font Awesome 5 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+	<!-- Styles for Cookie Consent Popup Message  -->
+	<link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-330587160-1"></script>
+</head>
+
+<body>
+<!-- ############### MENU ################# -->
+     <!-- Begin desktop menu -->
+    <div class="container-menu-desktop menu-light menu-sticky">
+        <!-- first child item -->
+        <h1>The Rookers</h1>
+                <!-- second child item -->
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../registry/index.html">Registry </a></li>
+            <li><a href="../story/index.html">Our Story </a></li>
+            <li><a href="../contact/index.html" class="btn-cta">RSVP &nbsp;<i class="fas fa-arrow-right"></i></a></li>
+        </ul>
+    </div>
+    <!-- End desktop menu -->
+
+
+    <!-- Begin mobile menu bar -->
+    <div class="container-menu-bar-mobile menu-light menu-sticky">
+            <!-- first child -->
+            <h1>The Rookers</h1>
+            <!-- second child -->
+            <div class="item-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    <!-- End mobile menu bar -->
+
+    <!-- Begin mobile menu slide-out options -->
+    <div class="flyout-menu flyout-menu-is-closed menu-light">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+             <li><a href="../registry/index.html">Registry </a></li>
+             <li><a href="../story/index.html">Our Story </a></li>
+             <li><a href="../contact/index.html" class="btn-cta">RSVP &nbsp;<i class="fas fa-arrow-right"></i></a></li>
+         </ul>
+        <hr>
+        <h4>Save The Date!</h4>
+        <div class="fly-out-profile-box">
+            <p>Join us <b>May 18th</b> at Sparrow Beginnings!</p>
+        </div>
+
+        <!-- <h4>Contact</h4>
+        <p>Have questions, comments, or concerns? You can reach out to me at any time.</p>   -->
+        <h5><a href="tel:0881234567">405-585-8011</a></h5>  
+        <h5><a href="mailto:zarek.rooker@okstate.edu" target="_blank">zarek.rooker@okstate.edu</a></h5> 
+        <h4>Social Links</h4>
+        <div class="fly-out-social-icons">
+            <a href="https://www.github.com/ZRooker" target="_blank"><i class="fab fa-github-square fa-fw"></i></a>
+            <a href="https://www.linkedin.com/in/zarek-rooker-615783219/" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+            <a href="https://twitter.com/ZRookk" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <!--<a href="https://www.facebook.com/IBATcollege" target="_blank"><i class="fab fa-facebook-square"></i></a>-->
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+    </div>
+    <!-- End mobile menu slide-out options -->
+<!-- ############### HERO ################# -->
+   <!-- Begin hero block -->
+   <div class="hero-flexbox unhide-content-under-sticky-menu">
+    <!-- <a ><img src="../assets/img/L1130068.jpg" alt="website background"></a> -->
+  <div class="hero-item-1 slide-in-left">
+      <h1></h1>
+      <!-- <h2>Sparrow Beginnings, Stillwater OK</h2>
+      <h3>May 18th, 2023</h3>  -->
+      <!-- <a href="contact/index.html" class="button button-solid">RSVP &nbsp;<i class="fas fa-arrow-right"></i></a> -->
+  </div>
+</div>  
+    <!-- <div class="body-container" id = "scroll-body"> 
+        <div class = "body-item-1 slide-in-left">
+            <h1> Request a Physical Save The Date:</h1>
+        </div>
+    </div> -->
+
+<!-- ############### STORY ################# -->
+    <!-- Begin container for contact form -->
+    <div class = "story-overview">
+        <div class="container-contact-form">
+            <!-- <div class = "contract-item-1">  -->
+                <!-- <h1>RSVP</h1> -->
+                <!-- <p>Use the form below to let me know a little more about your objectives and I'll get back to you.</p> -->
+            <!-- </div> -->
+            <!-- Contact form starts here -->  
+            <form id="fs-frm" name="basic-rsvp-form" accept-charset="utf-8" action="https://formspree.io/f/xwkdapon" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <div class = "contract-item-2"> 
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                    </div>
+
+                    <div class = "contract-item-4">
+                        <label for="plus">How many are needed?</label>
+                        <select name="plus" id="plus" required="">
+                            <option value="0" selected="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class = "contract-item-4"> 
+                        <label for="message">Provide Your Address</label>
+                        <textarea rows="3" name="message" id="message" placeholder="Street, City, State, Postal Code..."></textarea>
+                    </div>
+                    <div class = "contract-item-5"> 
+                        <label for="message">Additional Comments</label>
+                        <textarea rows="10" name="message" id="message" placeholder="Include any additional information"></textarea>
+                    </div>
+                <input type="hidden" name="_subject" id="email-subject" value="Request">
+                    </fieldset>
+                    <input type="submit" value="Request">
+            </form>
+        </div>
+    </div>
+
+    <!-- End container for contact form -->
+
+
+   <!-- ############### FOOTER ################# -->
+	 <!-- Begin HTML footer -->
+    
+     <div class="container-footer">
+        <div class = "flex-item-1"> 
+            <h4>Designed by Zarek Rooker</h4>
+            <h5>(With Lauren Millis frequently looking over his shoulder.)</h5>
+        </div>
+        <div class = "flex-item-2">
+            <h6> The Rookers </h6>
+        </div>
+
+        <div class = "flex-item-3"> 
+            <ul class="footer-icons">
+                <li>
+                    <a href="https://linkedin.com/in/zarekrooker" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.github.com/ZRooker" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/ZRookk" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                
+            </ul>                
+            
+            <a class="privacy-legal" href="privacy.html">Privacy & Legal</a>
+     </div>
+    </div>
+		<!-- End HTML footer -->
+</body>
+</html>
