@@ -2,14 +2,14 @@
 
 .slideshow-container {
     position: relative; 
-    height: 85%;
+    /* height: 85%; */
     /* margin-top: 100px; */
     /* margin-top: 15%; */
 }
 
 /* Adjusting Margin Based on Screen Size */
-@media all and (min-width:768px) {.slideshow-container { margin-top: 5%; }}
-@media all and (max-width:767px) {.slideshow-container { margin-top: 80px; height: 65%;}}
+@media all and (min-width:768px) {.slideshow-container { margin-top: 80px; height:85%;}}
+@media all and (max-width:767px) {.slideshow-container { margin-top: 80px; height: 85%;}}
 
 .slideshow-slide-1,
 .slideshow-slide-2,
@@ -198,11 +198,20 @@ p#demo{
     font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
 }
 
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: var(--background);
+    padding: 4% 10% 1% 10%;
+    gap: 1% 1%;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: var(--background);
     padding: 4%;
+    padding-top: 0%;
     gap: 1% 1%;
 }
 
@@ -214,7 +223,8 @@ p#demo{
     text-align: center;
 }
 
-.grid-container .grid-item img{
+.grid-container .grid-item img,
+.grid-container-1 .grid-item img{
     float: left;
     /* width:  auto; */
     height: 100%;
@@ -231,8 +241,61 @@ p#demo{
        align-content: space-around;
        flex-wrap: wrap; */
        background-color:var(--background);
-       height: 10%;
+       height: 4%;
 
    }
 
-  
+   .down-container {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.75); 
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    z-index: 998;
+    text-align: center;
+}
+
+.down-arrow {
+    line-height: 100px;
+    /* transform: rotate(90deg); */
+    color: white;
+    text-decoration: none;
+    z-index: 999;
+    transition: background-color 0.6s ease;
+    text-underline-offset: -12px;
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: var(--background);
+    padding: 5% 40% 0 40%;
+    gap: 1% 1%;
+    
+}
+
+.logo-item {
+    background-color: var(--footer);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 1%;
+    font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
+    text-align: center;
+    border-radius: 50%;
+}
+
+.logo-item img{
+    float: left;
+    /* width:  auto; */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}

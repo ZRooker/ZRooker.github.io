@@ -115,7 +115,7 @@
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
- 
+    
   
   <!-- The dots/circles -->
     <div class = "dot-container">
@@ -123,14 +123,17 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
+
+    <div class = "down-container"><a class = "down-arrow" href = "#story">&darr;</a></div>
   </div>
 
 <!-- ############### Blank ################# -->
-<div class="blank-container"> </div>
+<div class="blank-container"></div>
+
 
 <!-- ############### STORY ################# -->
     <!-- Begin container for contact form -->
-    <div class = "story-overview">
+    <div class = "story-overview" id = "story">
         <div class="story-container"> 
             <div class = "story-item-home slide-in-left">
                 <h1>Lauren & Zarek</h1>
@@ -138,6 +141,7 @@
                 <p id="demo"></p>
                 <!-- <h3>Sparrow Beginnings, Stillwater OK</h3> -->
                 <a href="https://www.sparrowbeginnings.com/" class="btn-cta">Sparrow Beginnings, Stillwater OK</a>
+                <div class = "logo-container"><div class="logo-item"><a><img src="assets/img/Logos/m2i8H7Z5b1m2G6b1.jpg" alt="Picture"></a></div></div>
             </div>
             <div class = "story-item-home-2 slide-in-left">
                 <a href="contact/index.html" class="btn-cta">RSVP &nbsp;<i ></i></a>
@@ -158,15 +162,17 @@
             </div>
 
             <!-- ################# Gallery ################ -->
-            <div class="grid-container">
+            <div class="grid-container-1">
                 <!-- <div class="grid-item"><a href="assets/img/z+l_4.jpg"><img src="assets/img/z+l_4.jpg" alt="Picture"></a></div> -->
-                <div class="grid-item"><a href="assets/img/L1130338.jpg"><img src="assets/img/L1130338.jpg" alt="Picture"></a></div>
-                <div class="grid-item"><a href="assets/img/z+l_4.jpg"><img src="assets/img/z+l_4.jpg" alt="Picture"></a></div>
-                <div class="grid-item"><a href="assets/img/L1130310.jpg"><img src="assets/img/L1130310.jpg" alt="Picture"></a></div>
+                <div class="grid-item"><a href="assets/img/gallery/L1130338.jpg"><img src="assets/img/L1130338.jpg" alt="Picture"></a></div>
+                <!-- <div class="grid-item"><a href="assets/img/z+l_4.jpg"><img src="assets/img/z+l_4.jpg" alt="Picture"></a></div> -->
+                <div class="grid-item"><a href="assets/img/gallery/L1130310.jpg"><img src="assets/img/L1130310.jpg" alt="Picture"></a></div>
                 <!-- <div class="grid-item"><a href="assets/img/L1130068.jpg"><img src="assets/img/L1130068.jpg" alt="Picture"></a></div> -->
-                <div class="grid-item"><a href="assets/img/_WKS8074.jpg"><img src="assets/img/_WKS8074.jpg" alt="Picture"></a></div>
-                <div class="grid-item"><a href="assets/img/_WKS8162.jpg"><img src="assets/img/_WKS8162.jpg" alt="Picture"></a></div>
-                <div class="grid-item"><a href="assets/img/_WKS8094.jpg"><img src="assets/img/_WKS8094.jpg" alt="Picture"></a></div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item"><a href="assets/img/gallery/_WKS8074.jpg"><img src="assets/img/_WKS8074.jpg" alt="Picture"></a></div>
+                <div class="grid-item"><a href="assets/img/gallery/_WKS8162.jpg"><img src="assets/img/_WKS8162.jpg" alt="Picture"></a></div>
+                <div class="grid-item"><a href="assets/img/gallery/_WKS8094.jpg"><img src="assets/img/_WKS8094.jpg" alt="Picture"></a></div>
                 <!-- <div class="grid-item"><a href="story/index.html"><img src="assets/img/_WKS8074.jpg" alt="Picture"></a></div> -->
                 <!-- <div class="grid-item"><a href="assets/img/_WKS8162.jpg"><img src="assets/img/_WKS8162.jpg" alt="Picture"></a></div>
                 <div class="grid-item"><a href="assets/img/_WKS8074.jpg"><img src="assets/img/_WKS8074.jpg" alt="Picture"></a></div> -->
@@ -225,5 +231,40 @@
     </div>
 	<!-- End HTML footer -->
 </body>	
-  
+  <script>
+        var images = document.querySelectorAll(".image-container img");
+        var currentIndex = 0;
+
+        function zoomImage(index) {
+            // Create a modal for zoomed-in view
+            var modal = document.createElement("div");
+            modal.className = "modal";
+            var zoomedImg = document.createElement("img");
+            zoomedImg.src = images[index].src;
+            modal.appendChild(zoomedImg);
+
+            // Create "Next" button
+            var nextButton = document.createElement("button");
+            nextButton.innerHTML = "Next";
+            nextButton.onclick = function() {
+                if (currentIndex < images.length - 1) {
+                    currentIndex++;
+                    zoomedImg.src = images[currentIndex].src;
+                }
+            };
+            modal.appendChild(nextButton);
+
+            // Create "Close" button
+            var closeButton = document.createElement("button");
+            closeButton.innerHTML = "Close";
+            closeButton.onclick = function() {
+                modal.style.display = "none";
+            };
+            modal.appendChild(closeButton);
+
+            // Display the modal
+            modal.style.display = "block";
+            document.body.appendChild(modal);
+        }
+    </script>
 </html>
