@@ -2,12 +2,13 @@
 
 .slideshow-container {
     position: relative; 
-    height: 50%;
-    margin-top: 100px;
+    height: 85%;
+    /* margin-top: 100px; */
+    /* margin-top: 15%; */
 }
 
 /* Adjusting Margin Based on Screen Size */
-@media all and (min-width:768px) {.slideshow-container { margin-top: 100px; }}
+@media all and (min-width:768px) {.slideshow-container { margin-top: 5%; }}
 @media all and (max-width:767px) {.slideshow-container { margin-top: 80px; height: 65%;}}
 
 .slideshow-slide-1,
@@ -213,4 +214,25 @@ p#demo{
     text-align: center;
 }
 
-.grid-item:hover{ background-color:var(--secondary);}
+.grid-container .grid-item img{
+    float: left;
+    /* width:  auto; */
+    height: 100%;
+    object-fit: cover;
+}
+
+   /* Proper Spacing for Very Large Websites Body and Medium */
+
+
+   .blank-container{
+       /* display: flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+       align-content: space-around;
+       flex-wrap: wrap; */
+       background-color:var(--background);
+       height: 10%;
+
+   }
+
+  
