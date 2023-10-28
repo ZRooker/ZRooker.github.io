@@ -187,21 +187,22 @@ p#demo{
 
 /* ######################## GALLERY BLOCK  ################################3# */
 .gallery-overview{
-    background-color:var(--background);
+    background-color:var(--gallery);
 }
 
 .gallery-container .gallery-item-1 h1{
+    background-color:var(--gallery);
     display: flex;
-    color: var(--primary);
+    color: var(--b);
     justify-content: center;
-    margin: 3% 0 0% 0; 
+    padding: 3% 0 0% 0; 
     font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
 }
 
 .grid-container-1 {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: var(--background);
+    background-color: var(--gallery);
     padding: 4% 10% 1% 10%;
     gap: 1% 1%;
 }
@@ -209,7 +210,7 @@ p#demo{
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: var(--background);
+    background-color: var(--gallery);
     padding: 4%;
     padding-top: 0%;
     gap: 1% 1%;
@@ -277,15 +278,15 @@ p#demo{
 .logo-container {
     display: grid;
     grid-template-columns: auto;
-    background-color: var(--background);
-    padding: 5% 40% 0 40%;
+    /* background-color: var(--background); */
+    padding: 5% 30% 0 30%;
     gap: 1% 1%;
     
 }
 
 .logo-item {
-    background-color: var(--footer);
-    border: 2px solid rgba(0, 0, 0, 0.8);
+    /* background-color: var(--footer); */
+    /* border: 2px solid rgba(0, 0, 0, 0.8); */
     padding: 1%;
     font-size: calc(20px + (20 - 10) * ((100vw - 320px) / (1600 - 320))); 
     text-align: center;

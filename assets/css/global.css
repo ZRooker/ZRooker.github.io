@@ -12,7 +12,9 @@
     :root{
         --text:black;
         --text-accent: #F8E8EE;
-        --background: #FEECED;
+        /* --background: #FEECED; */
+        /* --background: #FEECED; */
+        --background: white;
         --background-accent: #e6e6e6;
         --primary: #F9808A;
         --secondary: #e32b47;
@@ -21,6 +23,7 @@
         --box: white;
         --border: rgb(191,191,191);
         --bm: black;
+        --gallery: white;
     }
 }
 
@@ -33,10 +36,11 @@
         --primary: #F9808A;
         --secondary: #e32b47;
         --accent: #ec73c2;
-        --footer: #31212d;
+        --footer: black;
         --box: #090107;
         --border: #31212d;
         --bm: #31212d;   
+        --gallery: #090107;
     }
 }
 /* #endregion */
@@ -569,6 +573,18 @@ body::-webkit-scrollbar-thumb:hover {
         text-indent: 5%;
     }
 
+    .story-container li{
+        color: var(--text);
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
+    }
+
+    .story-container .story-item-1 a{
+        color: var(--primary);
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
+    }
+
+    
+
     /* CODE FOR STORY BECAUSE i BROKE IT BECAUSE I AM DUMB DONT DO THIS */
 
     /* VERY BAD CODING STANDARDS DONT DO THIS  */
@@ -950,6 +966,14 @@ body::-webkit-scrollbar-thumb:hover {
                 text-shadow: 1px 1px 1px black;
                 /* text-decoration: underline; */
             }
+
+            .container-contact-form h2{
+                color: var(--b); 
+                text-align: center;
+                /* text-shadow: 1px 1px 1px black; */
+                /* text-decoration: underline; */
+            }
         
             .container-contact-form h1{margin-top: 2%; font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
+            .container-contact-form h2{margin-top: 2%; font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); }
             
