@@ -572,6 +572,7 @@ body::-webkit-scrollbar-thumb:hover {
         line-height: 1.6;
         text-indent: 5%;
     }
+    
 
     .story-container li{
         color: var(--text);
