@@ -193,7 +193,7 @@ p#demo{
 .gallery-container .gallery-item-1 h1{
     background-color:var(--gallery);
     display: flex;
-    color: var(--b);
+    color: var(--text);
     justify-content: center;
     padding: 3% 0 0% 0; 
     font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
