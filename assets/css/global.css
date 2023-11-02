@@ -551,7 +551,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     .story-container .story-item-1 h1{margin-top: 2%; font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
     
-    .story-container .story-item-1 h2{
+    .story-container h2{
         color: var(--text); 
         font-weight: bold; 
         text-align: center;  
