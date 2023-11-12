@@ -169,6 +169,7 @@ p#demo{
     /* font-weight: bold; */
     color: var(--text);
     background-color: var(--primary);
+    font-weight: bold;
     /* text-shadow: 1px 2px 2px black; */
     width: 30%;
     padding: 1%;
