@@ -121,10 +121,12 @@ to {
 /* ######################## STORY BLOCK  ################################# */
  /* #region */
 /* Proper Spacing for Very Large Websites Story */
-@media all and (min-width:1500px) {.story-container { margin: 5% 50% 5% 50%; }}
+@media all and (min-width:1500px) {.story-container { margin: 5% 50% 5% 50%; }
+.story-container .story-item-home-2 a.btn-cta{width: 30%;}}
 
 /* Mid Size screen */
-@media all and (min-width:800px) {.story-container { margin: 5% 15% 5% 15%; }}
+@media all and (min-width:800px) {.story-container { margin: 5% 15% 5% 15%; }
+.story-container .story-item-home-2 a.btn-cta{width: 30%;}}
 .story-container .story-item-home{
     margin: 10% 0 5% 0;
 }
@@ -171,7 +173,7 @@ p#demo{
     background-color: var(--primary);
     font-weight: bold;
     /* text-shadow: 1px 2px 2px black; */
-    width: 30%;
+    width: 40%;
     padding: 1%;
     margin-bottom: 10%;
     text-align: center;

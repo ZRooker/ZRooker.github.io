@@ -375,7 +375,7 @@ body::-webkit-scrollbar-thumb:hover {
     /* cta button */
     .flyout-menu a.btn-cta {
         display: inline-block;
-        padding: 10px 24px;
+        padding: 10px 20px;
         background-color: var(--box);
     }
 
