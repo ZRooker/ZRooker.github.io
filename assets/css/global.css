@@ -531,7 +531,7 @@ body::-webkit-scrollbar-thumb:hover {
         background-image: url(/assets/img/background/pinkwood-hor.jpg);
         background-size: cover;
     }
-    
+
     .story-container{
         display: flex;
         justify-content: center; 
