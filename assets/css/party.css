@@ -23,7 +23,7 @@
         display: grid;
         grid-template-columns: auto auto;
         background-color: var(--gallery);
-        padding: 4% 10% 0% 10%;
+        padding: 4% 10% 10% 10%;
         /* gap: 1% 1%; */
     }
 
@@ -62,15 +62,16 @@
 
     .story-container p,
     .story-container h3{
-        color: var(--text);
+        /* color: var(--text); */
         font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
     }
 
-    .story-container h3{padding:3% 0 3% 0; }
+    .story-container h3{padding:3% 0 3% 0; color: var(--primary); }
 
     .story-container p{
         line-height: 1.6;
         /* text-indent: 5%; */
+        color: var(--text);
         padding:3% 0 3% 0; 
     }
     
