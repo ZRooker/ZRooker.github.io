@@ -303,3 +303,7 @@ p#demo{
     object-fit: cover;
     border-radius: 50%;
 }
+
+.story-overview{
+    background-attachment: scroll;
+}
