@@ -16,7 +16,7 @@
     }
      
     .story-header{
-        padding: 5% 0% 1% 0%;
+        padding: 5% 0% 0% 0%;
     }
   
     .grid-container{
@@ -44,13 +44,16 @@
     .story-container .row, 
     .story-container .row{padding: 2% 8% 2% 8%; }
 
-    .story-container h1{
+    .story-container h1,.story-header h1{
         color: var(--primary); 
         text-align: center;
         text-shadow: 1px 1px 1px black;
     }
+    .story-header.Groom h1{
+    color: var(--lb); 
+}
 
-    .story-container h1{margin-top: 2%; font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
+    .story-container h1,.story-header h1{ font-size: calc(30px + (30 - 10) * ((100vw - 320px) / (1600 - 320))); }
     
     .story-container h2{
         color: var(--text); 
@@ -141,3 +144,140 @@
 
 }
     /* #endregion */
+
+
+    
+/* ######################## CONTENT BLOCK  ################################3# */
+/* #region */
+    /* Proper Spacing for Very Large Websites Body and Medium */
+    @media all and (min-width:1500px) {.body-container { margin: 0% 50% 0% 50%; }}
+    @media all and (min-width:800px) {.body-container { margin: 0% 15% 0% 15%; }}
+
+    .body-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: space-around;
+        flex-wrap: wrap;
+        background-color:var(--background);
+        padding: 5%;
+    }
+
+    .body-container .body-item-left{
+        width: 40%;
+        height: 40%;
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+    
+    .body-container .body-item-left h1,
+    .body-container .body-item-right h1{
+        text-align: left;
+        font-size: calc(30px + (30 - 15) * ((100vw - 320px) / (1600 - 320))); 
+        text-shadow: 1px 1px 1px black;
+    }
+
+    .body-container .Bride h1{ color: var(--primary); }
+    .body-container .Groom h1{ color: var(--lb); }
+
+    .body-container .body-item-left h2,
+    .body-container .body-item-right h2{
+        padding-top: 2%;
+        color: var(--text);
+        text-align: left; 
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
+    }
+
+    .body-container .body-item-left p,
+    .body-container .body-item-right p{
+        padding: 2% 0% 2% 0%; 
+        color: var(--text);
+        margin-bottom: 0%;
+        font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
+        text-indent: 10%;
+        line-height: 1.4;
+    }
+
+    .body-img{
+        /* margin-bottom: 5%; */
+        flex-grow: 1;
+    }
+
+    .body-container .body-img img{
+        display: block;
+        margin: auto;
+        margin-bottom: 15%;
+        /* max-width: 70%; */
+        width: 50vh;
+        height: auto;
+        border: 3px solid var(--border);
+        /* opacity: 75%; */
+    }
+    .body-img.order-2 img{margin-top: 15%;}
+
+    /* .body-container .body-item-right .body-img img{
+        margin-left: auto;
+    }
+
+    .body-container .body-item-left .body-img img{
+        margin-left: auto;
+    } */
+
+
+ 
+    /* ===================== CONTENT BLOCK ON MOBILE  ========================== */
+    @media all and (max-width: 1315px) {
+        .body-container .body-item-right h1, .body-container .body-item-left h1 { text-align: center; margin-top: 5%; padding: 0;}
+        .body-container .body-item-right h2, .body-container .body-item-left h2{ text-align: center; margin-top: 1%; padding: 0;}
+        .body-container .body-item-right p, .body-container .body-item-left p{ text-align: center; margin: 4% 5% 5% 5%; padding: 0;}
+        .body-container .body-img img, .body-container .body-img img{margin: auto;width: 40vh;}
+        /* .body-container .body-item-4 img{ margin-bottom: 5%;} */
+        
+        /* Ordering containers for Mobile */
+        .body-container .body-img { margin-top: 5%;}
+        /* .body-container .body-item-4 { margin-top: 5%;} */
+        .body-container .body-item-left p{ margin-bottom: 5%;}
+        .body-container .body-item-right p{ margin-bottom: 5%;}
+        .body-container .order-1 { order: 1; }
+        .body-container .order-2 { order: 0; }
+        .body-container .order-3 { order: 3; }
+        .body-container .order-4 { order: 2; }
+        .body-container .order-5 { order: 5; }
+        .body-container .order-6 { order: 4; }
+        .body-container .order-7 { order: 7; }
+        .body-container .order-8 { order: 6; }
+        .body-container .order-9 { order: 9; }
+        .body-container .order-10 { order: 8; }
+        .body-container .order-11 { order: 11; }
+        .body-container .order-12 { order: 10; }
+        .body-container .order-13 { order: 13; }
+        .body-container .order-14 { order: 12; }
+        .body-container .order-15 { order: 15; }
+        .body-container .order-16 { order: 14; }
+        .body-container .order-17 { order: 17; }
+        .body-container .order-18 { order: 16; }
+        .body-container .order-19 { order: 19; }
+        .body-container .order-20 { order: 18; }
+        .body-container .order-21 { order: 21; }
+        .body-container .order-22 { order: 20; }
+        .body-container .order-23 { order: 23; }
+        .body-container .order-24 { order: 22; }
+        .body-container .order-25 { order: 25; }
+        .body-container .order-26 { order: 24; }
+        .body-container .order-27 { order: 27; }
+        .body-container .order-28 { order: 26; }
+        .body-container .order-29 { order: 29; }
+        .body-container .order-30 { order: 28; }
+        .body-container .order-31 { order: 31; }
+        .body-container .order-32 { order: 30; }
+        .body-container .order-33 { order: 33; }
+        .body-container .order-34 { order: 32; }
+        .body-container .order-35 { order: 35; }
+        .body-container .order-36 { order: 34; }
+        .body-container .order-37 { order: 37; }
+        .body-container .order-38 { order: 36; }
+
+
+        
+    }
+/* #endregion */
