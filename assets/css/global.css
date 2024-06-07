@@ -562,6 +562,7 @@ body::-webkit-scrollbar-thumb:hover {
     .story-container .story-item-1 h2{font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); }
 
     .story-container p,
+    .story-container .story-item-1 a.btn-cta,
     .story-container .story-item-1 h3{
         color: var(--text);
         font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
@@ -613,6 +614,7 @@ body::-webkit-scrollbar-thumb:hover {
     .story-container .story-sub-item-last p{ color: var(--text); font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); padding: 3% 0 0 0; }
 
 
+    .story-container .story-item-1 a.btn-cta:hover,
     .story-container h3:hover{color: var(--secondary)}
 
 
