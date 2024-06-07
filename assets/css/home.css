@@ -126,7 +126,9 @@ to {
 
 /* Mid Size screen */
 @media all and (min-width:800px) {.story-container { margin: 5% 15% 5% 15%; }
-.story-container .story-item-home-2 a.btn-cta{width: 30%;}}
+.story-container .story-item-home-2 a.btn-cta{width: 30%;}
+}
+
 .story-container .story-item-home{
     margin: 10% 0 5% 0;
 }
@@ -142,6 +144,7 @@ to {
     font-size: calc(15px + (15 - 10) * ((100vw - 320px) / (1600 - 320))); 
 }
 
+.story-item-home h2,
 .story-item-home h3{
 
     padding-left: 10%;
